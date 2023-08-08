@@ -179,7 +179,7 @@ footer div {
   color: #fff;
   padding: 20px;
   text-align: center;
-  background-image: url('AtariXLogo.jpg');
+  background-image: url('assets/AtariXLogo.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -189,7 +189,7 @@ footer div {
 #verifryd-section {
   padding: 20px;
   background-color: #333;
-  background-image: url('StickerFinal.png');
+  background-image: url('assets/StickerFinal.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -200,7 +200,7 @@ footer div {
   background-color: #444;
   color: #fff;
   padding: 20px;
-  background-image: url('StellaXBackground.png');
+  background-image: url('assets/StellaXBackground.png');
   background-size: cover;
 }
 
