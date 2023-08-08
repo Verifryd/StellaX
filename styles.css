@@ -1,4 +1,3 @@
-/* General styling for index page */
 #index-page {
   background-color: #000;
   color: #fff;
@@ -9,20 +8,16 @@
   height: 100vh;
 }
 
-/* Styling for the logos and pixel */
-#index-page img, #index-page video {
-  max-width: 80%;
-  margin: 20px;
+/* Styling for the clickable video */
+#index-page a.centered-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Styling for the Enter button (if used) */
-#index-page .enter-button {
-  background-color: #f00;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
+#index-page video {
+  max-width: 80%;
+}
 }
 
 /* General styling for body and header */
