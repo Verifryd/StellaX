@@ -16,26 +16,18 @@ function handleCutscene() {
 // Add event listeners to trigger the above functions when appropriate
 window.addEventListener('load', function() {
   var video = document.getElementById('intro-animation');
-  var placeholder = document.getElementById('placeholder-image');
+  var buttonsContainer = document.getElementById('buttons-container');
 
-  // Preload the video
-  video.preload = 'auto';
+  // When the video ends
+  video.addEventListener('ended', function() {
+    // Hide the video
+    video.style.display = 'none';
 
-  // When the video is ready to play
-  video.oncanplay = function() {
-    // Hide the placeholder
-    placeholder.style.display = 'none';
-
-    // Show the video
-    video.style.display = 'block';
-
-    // Play the video
-    video.play();
-  };
-
-  // Trigger the loading of the video
-  video.load();
+    // Show the buttons
+    buttonsContainer.style.display = 'flex';
+  });
 });
+
 
 
   /* Check if the cutscene has been viewed before (using local storage)

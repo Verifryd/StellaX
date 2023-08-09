@@ -73,6 +73,12 @@ header nav a {
   max-width: 50%;
 }
 
+#buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .pixel-button {
   display: inline-block;
   margin: 5px;
@@ -80,7 +86,6 @@ header nav a {
 
 .pixel-button img {
   width: 100px; /* Set the desired width */
-  /* Add any additional styling here */
 }
 
 #placeholder-image {
