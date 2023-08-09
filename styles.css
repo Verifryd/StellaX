@@ -79,6 +79,11 @@ header nav a {
   align-items: center;
 }
 
+#buttons-container img {
+  width: 50%; /* You can adjust this value to make the buttons bigger or smaller */
+  margin: 10px;
+}
+
 .pixel-button {
   display: inline-block;
   margin: 5px;
