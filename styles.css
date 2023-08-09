@@ -73,6 +73,17 @@ header nav a {
   max-width: 50%;
 }
 
+#placeholder-image {
+  display: block; /* Initially visible */
+  width: 100%;
+  height: auto;
+}
+
+#intro-animation {
+  display: none; /* Initially hidden */
+}
+
+
 /* Styling for the footer */
 footer {
   background-color: #333;
