@@ -18,8 +18,8 @@ window.addEventListener('load', function() {
   var video = document.getElementById('intro-animation');
   var placeholder = document.getElementById('placeholder-image');
 
-  // When the video metadata is loaded
-  video.addEventListener('loadedmetadata', function() {
+  // When the video is ready to play
+  video.addEventListener('canplay', function() {
     // Hide the placeholder
     placeholder.style.display = 'none';
 
