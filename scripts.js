@@ -26,7 +26,7 @@ window.addEventListener('load', handleCutscene);
     // Show the buttons
     buttonsContainer.style.display = 'flex';
   });
-});
+}
 
 
 
