@@ -102,8 +102,26 @@ body {
   width: 100%;
   height: auto;
   max-width: 400px; /* Limit the maximum width */
-  margin: 0 auto;
+  margin: 0 auto; /* Center the image */
+}
 
+.button-wrapper p {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold; /* Make the text bold */
+}
+
+
+
+#buttons-container a {
+  width: 40%; /* Adjust this value to change the button size */
+  padding: 10px; /* Padding around the buttons */
+}
+
+#buttons-container img {
+  width: 100%;
+  height: auto;
+}
 
 .pixel-button {
   display: inline-block;
