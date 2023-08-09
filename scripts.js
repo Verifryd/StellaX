@@ -14,7 +14,22 @@ function handleCutscene() {
 }
 
 // Add event listeners to trigger the above functions when appropriate
-window.addEventListener('load', handleCutscene);
+window.addEventListener('load', function() {
+  var video = document.getElementById('intro-animation');
+  var placeholder = document.getElementById('placeholder-image');
+
+  // When the video metadata is loaded
+  video.addEventListener('loadedmetadata', function() {
+    // Hide the placeholder
+    placeholder.style.display = 'none';
+
+    // Show the video
+    video.style.display = 'block';
+
+    // Play the video
+    video.play();
+  });
+});
 
   /* Check if the cutscene has been viewed before (using local storage)
   if (localStorage.getItem('cutsceneViewed') !== 'true') {
