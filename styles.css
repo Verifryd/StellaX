@@ -79,21 +79,21 @@ body {
 
 #buttons-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around; /* Added space-around to center the buttons */
   align-items: center;
   width: 100%;
-  height: 100vh; /* Full viewport height */
-  background-color: #fff; /* Making the background white */
+  height: 100vh;
+  background-color: #fff;
 }
 
 .button-wrapper {
-  width: 40%; /* Adjust this value to change the button size */
-  padding: 10px; /* Padding around the buttons */
-  text-align: center; /* Center-align the text */
+  width: 40%;
+  padding: 10px;
+  text-align: center;
 }
 
 .button-wrapper a {
-  display: block; /* Making the anchor tag block-level to allow for centering */
+  display: block;
 }
 
 .button-wrapper img {
@@ -102,9 +102,10 @@ body {
 }
 
 .button-wrapper p {
-  margin: 0; /* Removing default paragraph margin */
-  font-size: 18px; /* Adjust the font size as needed */
+  margin: 0;
+  font-size: 18px;
 }
+
 
 #buttons-container a {
   width: 40%; /* Adjust this value to change the button size */
