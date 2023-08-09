@@ -52,7 +52,6 @@ header nav a {
   width: 80%;
   margin: auto;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  overflow: hidden;
 }
 
 #animated-cutscene #intro-animation {
