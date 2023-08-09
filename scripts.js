@@ -2,7 +2,7 @@
 function handleCutscene() {
   var introAnimation = document.getElementById('intro-animation');
 
-  // Check if the cutscene has been viewed before (using local storage)
+  /* Check if the cutscene has been viewed before (using local storage)
   if (localStorage.getItem('cutsceneViewed') !== 'true') {
     // Play the cutscene
     introAnimation.play();
@@ -11,7 +11,7 @@ function handleCutscene() {
     localStorage.setItem('cutsceneViewed', 'true');
   } else {
     // Optionally, hide or skip the cutscene if viewed before
-    introAnimation.style.display = 'none';
+    introAnimation.style.display = 'none'; */
   }
 }
 
