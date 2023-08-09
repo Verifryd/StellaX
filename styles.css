@@ -73,14 +73,27 @@ header nav a {
   max-width: 50%;
 }
 
+body {
+  background-color: #fff; /* Making the background white */
+}
+
 #buttons-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column; /* Stacking buttons vertically */
+  width: 100%; /* Full width */
+  height: 100vh; /* Full viewport height */
 }
 
+#buttons-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Full width */
+
 #buttons-container img {
-  width: 50%; /* You can adjust this value to make the buttons bigger or smaller */
+  width: 80%; /* Increase this value to make the buttons bigger */
   margin: 10px;
 }
 
