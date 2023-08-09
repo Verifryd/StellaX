@@ -26,7 +26,7 @@ window.addEventListener('load', handleCutscene);
     // Show the buttons
     buttonsContainer.style.display = 'flex';
   });
-}
+});
 
 
 
@@ -49,7 +49,6 @@ function handlePixelSplit() {
   // Code to create the pixel splitting animation (e.g., using CSS animations or JavaScript)
 
   // Code to handle the transition to different pages based on user interaction with the pixels
-}
 
 // Add event listeners to trigger the above functions when appropriate
 window.addEventListener('load', handleCutscene);
