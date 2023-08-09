@@ -93,8 +93,10 @@ body {
   width: 100%; /* Full width */
 
 #buttons-container img {
-  width: 80%; /* Increase this value to make the buttons bigger */
-  margin: 10px;
+  width: 100%; /* Increase this value to make the buttons bigger */
+  max-width: 600px; /* You can adjust this value to set the maximum width */
+  margin: 10px auto; /* Center the buttons horizontally */
+  display: block; /* Display as block elements to align properly */
 }
 
 .pixel-button {
