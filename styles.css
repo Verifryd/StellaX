@@ -10,7 +10,7 @@
 
 /* Styling for the video */
 #index-page .centered-video video {
-  width: 50%; /* Reduce the width to 50% */
+  width: 60%; /* Reduce the width to 50% */
   margin: auto; /* Center the video horizontally */
   display: block; /* Block level to center properly */
 }
