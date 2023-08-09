@@ -18,8 +18,11 @@ window.addEventListener('load', function() {
   var video = document.getElementById('intro-animation');
   var placeholder = document.getElementById('placeholder-image');
 
+  // Preload the video
+  video.preload = 'auto';
+
   // When the video is ready to play
-  video.addEventListener('canplay', function() {
+  video.oncanplay = function() {
     // Hide the placeholder
     placeholder.style.display = 'none';
 
@@ -28,8 +31,12 @@ window.addEventListener('load', function() {
 
     // Play the video
     video.play();
-  });
+  };
+
+  // Trigger the loading of the video
+  video.load();
 });
+
 
   /* Check if the cutscene has been viewed before (using local storage)
   if (localStorage.getItem('cutsceneViewed') !== 'true') {
