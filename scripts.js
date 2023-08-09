@@ -67,3 +67,4 @@ window.addEventListener('load', handleCutscene);
 // Call the handleCutscene function when the page loads
 window.addEventListener('load', handleCutscene);
 
+}
