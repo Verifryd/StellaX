@@ -1,6 +1,20 @@
 // Function to handle the animated cutscene (optional view or one-time display)
 function handleCutscene() {
   var introAnimation = document.getElementById('intro-animation');
+  introAnimation.play();
+
+  // Listen for the 'ended' event to know when the video has finished playing
+  introAnimation.addEventListener('ended', function() {
+    // Hide the intro animation
+    document.getElementById('animated-cutscene').style.display = 'none';
+    
+    // Show the pixel buttons
+    document.getElementById('pixel-buttons').style.display = 'flex';
+  });
+}
+
+// Add event listeners to trigger the above functions when appropriate
+window.addEventListener('load', handleCutscene);
 
   /* Check if the cutscene has been viewed before (using local storage)
   if (localStorage.getItem('cutsceneViewed') !== 'true') {
