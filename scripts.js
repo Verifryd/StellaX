@@ -1,4 +1,5 @@
 // Function to handle the animated cutscene (optional view or one-time display)
+// Function to handle the animated cutscene (optional view or one-time display)
 function handleCutscene() {
   var introAnimation = document.getElementById('intro-animation');
   var buttonsContainer = document.getElementById('buttons-container');
@@ -13,8 +14,18 @@ function handleCutscene() {
   });
 }
 
-// Call the handleCutscene function when the page loads
+// Function to handle the pixel split transition
+function handlePixelSplit() {
+  var pixelVideo = document.getElementById('stellaX-pixel');
+
+  // Code to create the pixel splitting animation (e.g., using CSS animations or JavaScript)
+
+  // Code to handle the transition to different pages based on user interaction with the pixels
+}
+
+// Add event listeners to trigger the above functions when appropriate
 window.addEventListener('load', handleCutscene);
+
   var video = document.getElementById('intro-animation');
   var buttonsContainer = document.getElementById('buttons-container');
 
