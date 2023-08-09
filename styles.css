@@ -73,6 +73,17 @@ header nav a {
   max-width: 50%;
 }
 
+.pixel-button {
+  display: inline-block;
+  margin: 5px;
+}
+
+.pixel-button img {
+  width: 100px; /* Set the desired width */
+  /* Add any additional styling here */
+}
+
+
 #placeholder-image {
   display: block; /* Initially visible */
   width: 100%;
