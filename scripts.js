@@ -1,20 +1,20 @@
 // Function to handle the animated cutscene (optional view or one-time display)
 function handleCutscene() {
   var introAnimation = document.getElementById('intro-animation');
-  introAnimation.play();
+  var buttonsContainer = document.getElementById('buttons-container');
 
-  // Listen for the 'ended' event to know when the video has finished playing
+  // When the video ends
   introAnimation.addEventListener('ended', function() {
-    // Hide the intro animation
-    document.getElementById('animated-cutscene').style.display = 'none';
-    
-    // Show the pixel buttons
-    document.getElementById('pixel-buttons').style.display = 'flex';
+    // Hide the video
+    introAnimation.style.display = 'none';
+
+    // Show the buttons
+    buttonsContainer.style.display = 'flex';
   });
 }
 
-// Add event listeners to trigger the above functions when appropriate
-window.addEventListener('load', function() {
+// Call the handleCutscene function when the page loads
+window.addEventListener('load', handleCutscene);
   var video = document.getElementById('intro-animation');
   var buttonsContainer = document.getElementById('buttons-container');
 
@@ -27,6 +27,7 @@ window.addEventListener('load', function() {
     buttonsContainer.style.display = 'flex';
   });
 });
+
 
 
 
