@@ -56,3 +56,7 @@ function handlePixelSplit() {
 // Add event listeners to trigger the above functions when appropriate
 window.addEventListener('load', handleCutscene);
 // Other event listeners can be added as needed
+
+// Call the handleCutscene function when the page loads
+window.addEventListener('load', handleCutscene);
+
