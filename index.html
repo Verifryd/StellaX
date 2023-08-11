@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StellaX</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script type="module" src="/main.js"></script>
-  </head>
-  <body>
-    <div id="scene-container"></div>
-  </body>
+<head>
+  <link rel="preload" href="Assets/IntroAnimationProto.mp4" as="video" type="video/mp4">
+  <link rel="prefetch" href="homepage.html">
+  <link rel="stylesheet" href="styles.css">
+  <!-- ... (other head elements) -->
+</head>
+<body id="index-page">
+  <!-- Clickable looping video acting as the "Enter" button -->
+  <div class="centered-video">
+    <video id="stellaX-video" autoplay loop muted>
+      <source src="Assets/StellaX.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <script>
+    var video = document.getElementById('stellaX-video');
+
+    video.addEventListener('click', function() {
+      // Remove the loop attribute
+      this.removeAttribute('loop');
+
+      // Play the video if it's not already playing (in case it was paused)
+      this.play();
+
+      // Add an 'ended' event listener to navigate to the homepage when the video ends
+      this.addEventListener('ended', function() {
+        window.location.href = 'homepage.html';
+      });
+    });
+  </script>
+</body>
 </html>
