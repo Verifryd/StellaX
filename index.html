@@ -14,6 +14,7 @@
         var renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.body.appendChild(renderer.domElement);
+        renderer.setClearColor(0xffffff); // Set the background color to white
 
         // Load the texture
         var textureLoader = new THREE.TextureLoader();
@@ -30,6 +31,8 @@
 
                 cube.rotation.x += 0.01;
                 cube.rotation.y += 0.01;
+                controls.update(); // Update the controls
+                renderer.render(scene, camera);
 
                 renderer.render(scene, camera);
             }
@@ -37,6 +40,9 @@
             animate();
 
             // Add interactivity
+            const controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true; // Enable smooth damping
+            controls.dampingFactor = 0.05; // Damping factor
             var raycaster = new THREE.Raycaster();
             var mouse = new THREE.Vector2();
 
