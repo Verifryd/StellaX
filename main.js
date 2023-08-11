@@ -1,31 +1,32 @@
-// No need to import Three.js and OrbitControls since they are already included in the HTML file
+import * as THREE from 'https://threejs.org/build/three.module.js';
+import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
 
-// Your Three.js code here
-var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-var renderer = new THREE.WebGLRenderer();
+// Create scene, camera, and renderer
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+document.getElementById('scene-container').appendChild(renderer.domElement);
 
-var geometry = new THREE.BoxGeometry();
-var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-var cube = new THREE.Mesh(geometry, material);
+// Create cube
+const geometry = new THREE.BoxGeometry();
+const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
+// Position camera
 camera.position.z = 5;
 
-// Add OrbitControls
-var controls = new THREE.OrbitControls(camera, renderer.domElement);
+// Create controls
+const controls = new OrbitControls(camera, renderer.domElement);
 
-var animate = function () {
-  requestAnimationFrame(animate);
-
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
-
-  controls.update();
-
-  renderer.render(scene, camera);
-};
+// Animation loop
+function animate() {
+    requestAnimationFrame(animate);
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+    controls.update(); // Required for controls to work
+    renderer.render(scene, camera);
+}
 
 animate();
