@@ -1,32 +1,27 @@
-// Initialization code
+import * as THREE from 'https://threejs.org/build/three.module.js';
+import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
+
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-// Cube code
 var geometry = new THREE.BoxGeometry();
 var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 var cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
-// OrbitControls code
-var controls = new THREE.OrbitControls(camera, renderer.domElement);
-
 camera.position.z = 5;
 
-var animate = function () {
-  requestAnimationFrame(animate);
+var controls = new OrbitControls(camera, renderer.domElement);
 
-  // Cube rotation
+function animate() {
+  requestAnimationFrame(animate);
   cube.rotation.x += 0.01;
   cube.rotation.y += 0.01;
-
-  // Update controls
-  controls.update();
-
   renderer.render(scene, camera);
-};
+}
 
 animate();

@@ -1,67 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StellaX</title>
-  <!-- Three.js library -->
-  <script src="lib/three.module.js"></script>
-  <!-- OrbitControls -->
-<script src="lib/OrbitControls.js"></script> <!-- Adjust the path if needed --></script>
-  <!-- Custom script -->
-  <script type="module" src="main.js"></script>
-</script>
-
-</head>
-<body>
-    <script>
-        var scene = new THREE.Scene();
-        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
-        var renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
-
-        // Load the texture
-        var textureLoader = new THREE.TextureLoader();
-        textureLoader.load('Assets/HomepagePlaceholder.png', function(texture) {
-            var geometry = new THREE.BoxGeometry();
-            var material = new THREE.MeshBasicMaterial({ map: texture });
-            var cube = new THREE.Mesh(geometry, material);
-            scene.add(cube);
-
-            camera.position.z = 5;
-
-            function animate() {
-                requestAnimationFrame(animate);
-
-                cube.rotation.x += 0.01;
-                cube.rotation.y += 0.01;
-
-                renderer.render(scene, camera);
-            }
-
-            animate();
-
-            // Add interactivity
-            var raycaster = new THREE.Raycaster();
-            var mouse = new THREE.Vector2();
-
-            window.addEventListener('click', function(event) {
-                mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-                mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-
-                raycaster.setFromCamera(mouse, camera);
-
-                var intersects = raycaster.intersectObjects(scene.children);
-                if (intersects.length > 0) {
-                    // Cube was clicked
-                    alert('Cube clicked! Redirecting...');
-                    window.location.href = 'homepage.html'; // Redirect to homepage
-                }
-            });
-        });
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StellaX</title>
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <div id="scene-container"></div>
+  </body>
 </html>
-
