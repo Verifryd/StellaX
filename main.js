@@ -1,6 +1,6 @@
-import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
+// No need to import Three.js and OrbitControls since they are already included in the HTML file
 
-// Your existing code for setting up THREE.js scene
+// Your Three.js code here
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 var renderer = new THREE.WebGLRenderer();
@@ -15,17 +15,17 @@ scene.add(cube);
 camera.position.z = 5;
 
 // Add OrbitControls
-var controls = new OrbitControls(camera, renderer.domElement);
+var controls = new THREE.OrbitControls(camera, renderer.domElement);
 
 var animate = function () {
-    requestAnimationFrame(animate);
+  requestAnimationFrame(animate);
 
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+  cube.rotation.x += 0.01;
+  cube.rotation.y += 0.01;
 
-    controls.update();
+  controls.update();
 
-    renderer.render(scene, camera);
+  renderer.render(scene, camera);
 };
 
 animate();
