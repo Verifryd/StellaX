@@ -4,10 +4,44 @@
   <link rel="preload" href="Assets/IntroAnimationProto.mp4" as="video" type="video/mp4">
   <link rel="prefetch" href="homepage.html">
   <link rel="stylesheet" href="styles.css">
+  <script type="module" src="https://cdn.skypack.dev/three"></script>
   <!-- ... (other head elements) -->
 </head>
 <body id="index-page">
   <!-- Clickable looping video acting as the "Enter" button -->
+  <script type="module">
+  import * as THREE from 'https://cdn.skypack.dev/three';
+
+  // Create a scene, camera, and renderer
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+
+  // Create a cube
+  const geometry = new THREE.BoxGeometry();
+  const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+  const cube = new THREE.Mesh(geometry, material);
+  scene.add(cube);
+
+  // Set camera position
+  camera.position.z = 5;
+
+  // Animation function
+  function animate() {
+    requestAnimationFrame(animate);
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  // Add mouse click event listener
+  document.addEventListener('click', () => {
+    window.location.href = 'homepage.html'; // Redirect to the homepage on click
+  });
+</script>
   <div class="centered-video">
     <video id="stellaX-video" autoplay loop muted>
       <source src="Assets/StellaX.mp4" type="video/mp4">
