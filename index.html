@@ -16,6 +16,9 @@
         document.body.appendChild(renderer.domElement);
         renderer.setClearColor(0xffffff); // Set the background color to white
 
+        // Define OrbitControls
+        var controls = new THREE.OrbitControls(camera, renderer.domElement);
+
         // Load the texture
         var textureLoader = new THREE.TextureLoader();
         textureLoader.load('Assets/HomepagePlaceholder.png', function(texture) {
@@ -32,7 +35,6 @@
                 cube.rotation.x += 0.01;
                 cube.rotation.y += 0.01;
                 controls.update(); // Update the controls
-                renderer.render(scene, camera);
 
                 renderer.render(scene, camera);
             }
