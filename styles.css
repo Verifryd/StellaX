@@ -153,6 +153,60 @@ footer div {
   /* Additional styling for links, copyright, and social media */
 }
 
+/* Existing Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.header, .footer {
+  text-align: center;
+  padding: 20px;
+}
+
+/* New Styles for Game Overview Page */
+.game-container {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.game-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.items-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+
+.item {
+  width: 30%;
+  text-align: center;
+  margin: 10px;
+}
+
+.item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+
 /* Objectives Section */
 #objectives {
   display: flex;
@@ -293,43 +347,4 @@ footer div {
   max-width: 100%;
   margin: 10px;
 }
-
-.game-container {
-  width: 100%;
-  margin: 20px auto;
-  text-align: center;
-  border: 1px solid #ddd;
-}
-
-.game-container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: auto;
-}
-
-.items-container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin: 20px auto;
-}
-
-.item {
-  width: 30%;
-  text-align: center;
-  margin: 10px;
-}
-
-.item img {
-  max-width: 100%;
-  height: auto;
-}
-
-.item p {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #333;
-}
-
 
