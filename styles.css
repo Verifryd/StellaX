@@ -100,10 +100,6 @@ body {
   margin: 
 
 
-
-
-
-
 #buttons-container a {
   width: 40%; /* Adjust this value to change the button size */
   padding: 10px; /* Padding around the buttons */
@@ -297,11 +293,6 @@ footer div {
   max-width: 100%;
   margin: 10px;
 }
-
-/* Reuse general styling from previous pages (e.g., header, footer) */
-
-/* Existing Styles for Header, Footer, etc. */
-/* ... */
 
 .game-container {
   width: 100%;
