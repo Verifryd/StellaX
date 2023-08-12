@@ -1,302 +1,65 @@
-#index-page {
-  background-color: #fff; /* White background */
-  color: #000; /* Black text color */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-/* Styling for the video */
-#index-page .centered-video video {
-  width: 70%; /* Reduce the width to 50% */
-  margin: auto; /* Center the video horizontally */
-  display: block; /* Block level to center properly */
-}
-
-#index-page video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Maintain aspect ratio while filling the container */
-}
-
-/* General styling for body and header */
 body {
-  background-color: #000;
-  color: #fff;
-  font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #333;
+a {
+    text-decoration: none;
+    color: #333;
 }
 
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Styling for the animated cutscene section */
-#animated-cutscene {
-  position: fixed; /* Fixed position to cover the entire viewport */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; /* Hide anything outside the viewport */
-  z-index: 9999; /* Ensure it's on top of other elements */
+.header {
+    text-align: center;
+    padding: 50px;
 }
 
-#animated-cutscene #intro-animation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Maintain aspect ratio while filling the container */
+.header h1 {
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
-/* Styling for the pixel split transition section */
-#pixel-split {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.header p {
+    color: #666;
+    font-size: 18px;
 }
 
-#pixel-split #stellaX-pixel {
-  max-width: 50%;
+.game-container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
 }
 
-body {
-  background-color: #fff; /* Making the background white */
+.game-container img {
+    max-width: 100%;
 }
 
-#buttons-container {
-  display: flex;
-  justify-content: center; /* Center the buttons horizontally */
-  align-items: center; /* Center the buttons vertically */
-  flex-wrap: wrap;
+.items-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
 }
 
-.button-wrapper {
-  width: 40%; /* You can increase the width percentage to make the buttons bigger */
-  padding: 10px;
-  text-align: center;
+.item {
+    width: 30%;
+    text-align: center;
 }
 
-.button-wrapper a {
-  display: block;
+.item img {
+    max-width: 100%;
+    height: auto;
 }
 
-.button-wrapper img {
-  width: 100%; /* Set the image width to 100% of the container */
-  height: auto;
-  margin: 
-
-
-
-
-
-
-#buttons-container a {
-  width: 40%; /* Adjust this value to change the button size */
-  padding: 10px; /* Padding around the buttons */
+.item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
 }
-
-#buttons-container img {
-  width: 100%;
-  height: auto;
-}
-
-.pixel-button {
-  display: inline-block;
-  margin: 5px;
-}
-
-.pixel-button img {
-  width: 100px; /* Set the desired width */
-}
-
-#placeholder-image {
-  display: block; /* Initially visible */
-  width: 100%;
-  height: auto;
-}
-
-#animated-cutscene {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  overflow: hidden;
-}
-
-#intro-animation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Styling for the footer */
-footer {
-  background-color: #333;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-footer div {
-  /* Additional styling for links, copyright, and social media */
-}
-
-/* Objectives Section */
-#objectives {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-
-#objectives div {
-  text-align: center;
-  width: 30%;
-  margin: 10px;
-}
-
-#objectives img {
-  max-width: 100%;
-}
-
-/* Two Pixels, One Grand Prize Section */
-#two-pixels {
-  padding: 20px;
-  background-color: #222;
-  color: #fff;
-}
-
-/* Live Mini-Map Section */
-#map {
-  padding: 20px;
-  background-color: #333;
-}
-
-#live-map {
-  /* Styling for the dynamic map, if needed */
-}
-
-/* Reuse general styling from previous pages (e.g., header, footer) */
-
-/* 50 Years of Atari Section */
-#atari-section {
-  background-color: #222;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-#atari-section img {
-  max-width: 45%;
-  margin: 10px;
-}
-
-/* Community Contributions Section */
-#community-contributions {
-  padding: 20px;
-  background-color: #333;
-}
-
-#community-contributions #chat-box {
-  border: 2px solid #fff;
-  padding: 10px;
-}
-
-#community-contributions a {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Daily Clues & Puzzles Section */
-#daily-clues {
-  padding: 20px;
-  background-color: #444;
-}
-
-#daily-clues #clue-placeholder1,
-#daily-clues #clue-placeholder2 {
-  /* Styling for the clue or puzzle placeholders */
-  border: 2px dashed #fff;
-  height: 200px;
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Reuse general styling from previous pages (e.g., header, footer) */
-
-/* AtariX Section */
-#atarix-section {
-  background-color: #222;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  background-image: url('assets/AtariXLogo.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* Verifryd Brand Section */
-#verifryd-section {
-  padding: 20px;
-  background-color: #333;
-  background-image: url('assets/StickerFinal.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.fade-out {
-  animation: fadeOut 0.5s forwards;
-}
-
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-
-/* Game Background Section */
-#game-background {
-  background-color: #444;
-  color: #fff;
-  padding: 20px;
-  background-image: url('assets/StellaXBackground.png');
-  background-size: cover;
-}
-
-/* Warren Robinett Tribute Section */
-#robinett-tribute {
-  padding: 20px;
-  background-color: #555;
-  text-align: center;
-}
-
-#robinett-tribute img {
-  max-width: 100%;
-  margin: 10px;
-}
-
-/* Reuse general styling from previous pages (e.g., header, footer) */
-
