@@ -168,39 +168,39 @@ body {
 }
 
 /* New Styles for Game Overview Page */
-.game-container {
+#game-container {
   width: 100%;
   margin: 20px auto;
   text-align: center;
   border: 1px solid #ddd;
 }
 
-.game-container img {
+#game-container img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: auto;
 }
 
-.items-container {
+#items-container {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin: 20px auto;
 }
 
-.item {
+#item {
   width: 30%;
   text-align: center;
   margin: 10px;
 }
 
-.item img {
+#item img {
   max-width: 100%;
   height: auto;
 }
 
-.item p {
+#item p {
   margin-top: 10px;
   font-size: 14px;
   color: #333;
