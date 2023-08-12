@@ -289,36 +289,36 @@ footer div {
 /* ... existing styles for the homepage ... */
 
 /* Styles for the game overview page */
-.game-container {
+#game-container {
     width: 80%;
     margin: 20px auto;
     text-align: center;
     border: 1px solid #ccc;
 }
 
-.game-container img {
+#game-container img {
     width: 100%;
     height: auto;
 }
 
-.items-container {
+#items-container {
     display: flex;
     justify-content: space-between;
     margin: 20px auto;
     flex-wrap: wrap;
 }
 
-.item {
+#item {
     width: 30%;
     text-align: center;
 }
 
-.item img {
+#item img {
     max-width: 100%;
     height: auto;
 }
 
-.item p {
+#item p {
     margin-top: 10px;
     font-size: 14px;
     color: #333;
