@@ -62,6 +62,21 @@ header nav a {
   object-fit: cover; /* Maintain aspect ratio while filling the container */
 }
 
+/* Styling for the pixel split transition section */
+#pixel-split {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pixel-split #stellaX-pixel {
+  max-width: 50%;
+}
+
+body {
+  background-color: #fff; /* Making the background white */
+}
+
 #buttons-container {
   display: flex;
   justify-content: center; /* Center the buttons horizontally */
@@ -79,10 +94,14 @@ header nav a {
   display: block;
 }
 
-#button-wrapper img {
+.button-wrapper img {
   width: 100%; /* Set the image width to 100% of the container */
   height: auto;
   margin: 
+
+
+
+
 
 
 #buttons-container a {
@@ -95,12 +114,12 @@ header nav a {
   height: auto;
 }
 
-#pixel-button {
+.pixel-button {
   display: inline-block;
   margin: 5px;
 }
 
-#pixel-button img {
+.pixel-button img {
   width: 100px; /* Set the desired width */
 }
 
@@ -137,60 +156,6 @@ footer {
 footer div {
   /* Additional styling for links, copyright, and social media */
 }
-
-/* Existing Styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: white;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-#header, #footer {
-  text-align: center;
-  padding: 20px;
-}
-
-/* New Styles for Game Overview Page */
-#game-container {
-  width: 100%;
-  margin: 20px auto;
-  text-align: center;
-  border: 1px solid #ddd;
-}
-
-#game-container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: auto;
-}
-
-#items-container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin: 20px auto;
-}
-
-#item {
-  width: 30%;
-  text-align: center;
-  margin: 10px;
-}
-
-#item img {
-  max-width: 100%;
-  height: auto;
-}
-
-#item p {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #333;
-}
-
 
 /* Objectives Section */
 #objectives {
@@ -332,4 +297,5 @@ body {
   max-width: 100%;
   margin: 10px;
 }
+
 
