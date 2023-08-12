@@ -274,38 +274,36 @@ footer div {
 
 
 /* Game Background Section */
-.game-container {
-    width: 80%;
-    margin: 20px auto;
-    text-align: center;
-    border: 1px solid #ddd; /* Adding a border for visibility */
+.game-overview .game-container {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
 }
 
-.game-container img {
-    max-width: 100%;
-    height: auto;
+.game-overview .game-container img {
+  max-width: 100%;
 }
 
-.items-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px auto;
+.game-overview .items-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
 }
 
-.item {
-    width: 30%;
-    text-align: center;
+.game-overview .item {
+  width: 30%;
+  text-align: center;
 }
 
-.item img {
-    max-width: 100%;
-    height: auto;
+.game-overview .item img {
+  max-width: 100%;
+  height: auto;
 }
 
-.item p {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #333;
+.game-overview .item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
 }
 
 /* Additional styles for header and footer if needed */
