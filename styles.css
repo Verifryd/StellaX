@@ -300,36 +300,45 @@ footer div {
 
 /* Reuse general styling from previous pages (e.g., header, footer) */
 
+/* Existing Styles for Header, Footer, etc. */
+/* ... */
+
 .game-container {
-    width: 80%;
-    margin: 20px auto;
-    text-align: center;
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+  border: 1px solid #ddd;
 }
 
 .game-container img {
-    max-width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
 }
 
 .items-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 20px auto;
 }
 
 .item {
-    width: 30%;
-    text-align: center;
+  width: 30%;
+  text-align: center;
+  margin: 10px;
 }
 
 .item img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .item p {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #333;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
 }
 
 
