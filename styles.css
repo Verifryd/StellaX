@@ -84,17 +84,17 @@ body {
   flex-wrap: wrap;
 }
 
-.button-wrapper {
+#button-wrapper {
   width: 40%; /* You can increase the width percentage to make the buttons bigger */
   padding: 10px;
   text-align: center;
 }
 
-.button-wrapper a {
+#button-wrapper a {
   display: block;
 }
 
-.button-wrapper img {
+#button-wrapper img {
   width: 100%; /* Set the image width to 100% of the container */
   height: auto;
   margin: 
