@@ -289,33 +289,33 @@ footer div {
 /* ... existing styles for the homepage ... */
 
 /* Styles for the game overview page */
-.game-overview .game-container {
+#game-overview #game-container {
   width: 80%;
   margin: 20px auto;
   text-align: center;
 }
 
-.game-overview .game-container img {
+#game-overview #game-container img {
   max-width: 100%;
 }
 
-.game-overview .items-container {
+#game-overview #items-container {
   display: flex;
   justify-content: space-between;
   margin: 20px auto;
 }
 
-.game-overview .item {
+#game-overview #item {
   width: 30%;
   text-align: center;
 }
 
-.game-overview .item img {
+#game-overview #item img {
   max-width: 100%;
   height: auto;
 }
 
-.game-overview .item p {
+#game-overview #item p {
   margin-top: 10px;
   font-size: 14px;
   color: #333;
