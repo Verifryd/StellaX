@@ -84,21 +84,25 @@ body {
   flex-wrap: wrap;
 }
 
-#button-wrapper {
+.button-wrapper {
   width: 40%; /* You can increase the width percentage to make the buttons bigger */
   padding: 10px;
   text-align: center;
 }
 
-#button-wrapper a {
+.button-wrapper a {
   display: block;
 }
 
-#button-wrapper img {
+.button-wrapper img {
   width: 100%; /* Set the image width to 100% of the container */
   height: auto;
   margin: 
-}
+
+
+
+
+
 
 #buttons-container a {
   width: 40%; /* Adjust this value to change the button size */
@@ -110,12 +114,12 @@ body {
   height: auto;
 }
 
-#pixel-button {
+.pixel-button {
   display: inline-block;
   margin: 5px;
 }
 
-#pixel-button img {
+.pixel-button img {
   width: 100px; /* Set the desired width */
 }
 
@@ -274,40 +278,13 @@ footer div {
 
 
 /* Game Background Section */
-.game-overview .game-container {
-  width: 80%;
-  margin: 20px auto;
-  text-align: center;
+#game-background {
+  background-color: #444;
+  color: #fff;
+  padding: 20px;
+  background-image: url('assets/StellaXBackground.png');
+  background-size: cover;
 }
-
-.game-overview .game-container img {
-  max-width: 100%;
-}
-
-.game-overview .items-container {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px auto;
-}
-
-.game-overview .item {
-  width: 30%;
-  text-align: center;
-}
-
-.game-overview .item img {
-  max-width: 100%;
-  height: auto;
-}
-
-.game-overview .item p {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #333;
-}
-
-/* Additional styles for header and footer if needed */
-
 
 /* Warren Robinett Tribute Section */
 #robinett-tribute {
@@ -321,4 +298,5 @@ footer div {
   margin: 10px;
 }
 
+/* Reuse general styling from previous pages (e.g., header, footer) */
 
