@@ -270,7 +270,7 @@ footer div {
 /* AtariX Section */
 #atari-section {
   max-width: 10%; /* Adjust the size of the gifs */
-  height: auto;
+  max-height: 10%;
   background-color: #fff;
   color: #fff;
   padding: 10px;
@@ -282,7 +282,7 @@ footer div {
 /* Verifryd Brand Section */
 #verifryd-section {
   max-width: 10%; /* Adjust the size of the gifs */
-  height: auto;
+  max-height: 10%;
   padding: 10px;
   background-color: #fff;
   background-image: url('assets/StickerFinal.png');
