@@ -170,12 +170,6 @@ footer div {
   max-width: 100%;
 }
 
-.minimap-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px auto;
-}
-
 .game-section {
     display: flex;
     justify-content: center;
@@ -195,12 +189,12 @@ footer div {
     height: auto;
 }
 
-.live-minimap {
+.minimap-container {
     width: 20%; /* Adjust the width as needed */
     text-align: center;
 }
 
-.live-minimap img {
+.minimap-container img {
     max-width: 20%;
     height: auto;
 }
