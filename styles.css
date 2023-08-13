@@ -195,12 +195,12 @@ footer div {
     height: auto;
 }
 
-.live-minimap {
+.minimap-container {
     width: 20%; /* Adjust the width as needed */
     text-align: center;
 }
 
-.live-minimap img {
+.minimap-container img {
     max-width: 20%;
     height: auto;
 }
@@ -233,16 +233,6 @@ footer div {
   padding: 20px;
   background-color: #222;
   color: #fff;
-}
-
-/* Live Mini-Map Section */
-#map {
-  padding: 20px;
-  background-color: #333;
-}
-
-#live-map {
-  /* Styling for the dynamic map, if needed */
 }
 
 /* Reuse general styling from previous pages (e.g., header, footer) */
