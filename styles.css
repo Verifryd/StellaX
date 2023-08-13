@@ -47,8 +47,8 @@ header nav a {
   position: fixed; /* Fixed position to cover the entire viewport */
   top: 0;
   left: 0;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   overflow: hidden; /* Hide anything outside the viewport */
   z-index: 9999; /* Ensure it's on top of other elements */
 }
@@ -86,7 +86,7 @@ body {
 }
 
 .button-wrapper {
-  width: 45%; /* You can increase the width percentage to make the buttons bigger */
+  width: 20%; /* You can increase the width percentage to make the buttons bigger */
   padding: 5px;
   text-align: center;
 }
