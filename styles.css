@@ -243,14 +243,14 @@ footer div {
 
 /* 50 Years of Atari Section */
 #atari-section {
-  background-color: #222;
+  background-color: #fff;
   color: #fff;
-  padding: 20px;
+  padding: 5px;
   text-align: center;
 }
 
 #atari-section img {
-  max-width: 45%;
+  max-width: 10%;
   margin: 10px;
 }
 
