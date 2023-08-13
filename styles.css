@@ -82,7 +82,8 @@ body {
   justify-content: center; /* Center the buttons horizontally */
   align-items: center; /* Center the buttons vertically */
   flex-wrap: wrap;
-  width: 100%; /* Full width of the parent container */
+  height: 50vh; /* Adjust this value to position the buttons vertically */
+  margin-top: 25vh; /* Adjust this value to control the vertical spacing from the top */
 }
 
 .button-wrapper {
