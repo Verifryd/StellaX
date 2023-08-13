@@ -276,9 +276,7 @@ footer div {
   padding: 10px;
   text-align: center;
   background-image: url('assets/AtariXLogo.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-size: absolute;
 }
 
 /* Verifryd Brand Section */
@@ -288,9 +286,7 @@ footer div {
   padding: 10px;
   background-color: #fff;
   background-image: url('assets/StickerFinal.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-size: absolute;
 }
 
 .fade-out {
