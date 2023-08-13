@@ -93,11 +93,11 @@ height: 50vh; /* Adjust this value to position the buttons vertically */
 
 #buttons-container a {
   width: 40%; /* Adjust this value to change the button size */
-  padding: 10px; /* Padding around the buttons */
+  padding: 15px; /* Padding around the buttons */
 }
 
 #buttons-container img {
-  width: 20%;
+  width: 18%;
   height: auto;
 }
 
