@@ -47,8 +47,8 @@ header nav a {
   position: fixed; /* Fixed position to cover the entire viewport */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   overflow: hidden; /* Hide anything outside the viewport */
   z-index: 9999; /* Ensure it's on top of other elements */
 }
