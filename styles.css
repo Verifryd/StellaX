@@ -50,7 +50,7 @@ header nav a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 80%;
+  height: 100%;
   overflow: hidden; /* Hide anything outside the viewport */
   z-index: 9999; /* Ensure it's on top of other elements */
 }
@@ -62,17 +62,6 @@ header nav a {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Maintain aspect ratio while filling the container */
-}
-
-/* Styling for the pixel split transition section */
-#pixel-split {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#pixel-split #stellaX-pixel {
-  max-width: 50%;
 }
 
 body {
