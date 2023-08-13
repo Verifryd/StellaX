@@ -254,37 +254,31 @@ footer div {
   margin: 10px;
 }
 
-/* Community Contributions Section */
-#community-contributions {
-  padding: 20px;
-  background-color: #333;
+.community-container {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-#community-contributions #chat-box {
-  border: 2px solid #fff;
-  padding: 10px;
+.puzzle-item {
+    width: 30%;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
 }
 
-#community-contributions a {
-  color: #fff;
-  text-decoration: none;
+.puzzle-item img {
+    max-width: 100%;
+    height: auto;
 }
 
-/* Daily Clues & Puzzles Section */
-#daily-clues {
-  padding: 20px;
-  background-color: #444;
-}
-
-#daily-clues #clue-placeholder1,
-#daily-clues #clue-placeholder2 {
-  /* Styling for the clue or puzzle placeholders */
-  border: 2px dashed #fff;
-  height: 200px;
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.puzzle-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
 }
 
 /* Reuse general styling from previous pages (e.g., header, footer) */
