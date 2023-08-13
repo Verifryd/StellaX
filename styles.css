@@ -170,9 +170,14 @@ footer div {
   max-width: 100%;
 }
 
-.game-container {
-    width: 60%;
+.main-container {
+    display: flex;
+    justify-content: space-between;
     margin: 20px auto;
+}
+
+.game-container {
+    width: 65%;
     text-align: center;
     border: 1px solid #ccc;
 }
@@ -182,12 +187,14 @@ footer div {
     height: auto;
 }
 
-.minimap {
+.minimap-container {
     width: 30%;
-    height: 300px; /* Adjust as needed */
-    border: 1px solid #ccc;
-    float: right;
-    margin: 20px;
+    text-align: center;
+}
+
+.minimap-container img {
+    max-width: 100%;
+    height: auto;
 }
 
 .items-container {
@@ -198,12 +205,12 @@ footer div {
 }
 
 .item {
-    width: 25%; /* Reduced width */
+    width: 20%; /* Reduced width to shrink the GIFs */
     text-align: center;
 }
 
 .item img {
-    max-width: 70%; /* Reduced size */
+    max-width: 100%;
     height: auto;
 }
 
