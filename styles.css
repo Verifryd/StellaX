@@ -244,9 +244,12 @@ footer div {
 /* 50 Years of Atari Section */
 #atari-section {
   background-color: #fff;
-  color: #fff;
+  color: #000; /* Set the text color to black for better visibility */
   padding: 5px;
   text-align: center;
+  display: flex; /* Use flexbox to align the images horizontally */
+  justify-content: center; /* Center the images horizontally */
+  flex-wrap: wrap; /* Allow the images to wrap to the next line if needed */
 }
 
 #atari-section img {
