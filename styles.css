@@ -189,12 +189,12 @@ footer div {
     height: auto;
 }
 
-.minimap-container {
+.live-minimap {
     width: 20%; /* Adjust the width as needed */
     text-align: center;
 }
 
-.minimap-container img {
+.live-minimap img {
     max-width: 20%;
     height: auto;
 }
