@@ -11,7 +11,7 @@
 /* Styling for the video */
 #index-page .centered-video video {
   background-color: #fff; /* White background */
-  width: 70%; /* Reduce the width to 50% */
+  width: 50%; /* Reduce the width to 50% */
   margin: auto; /* Center the video horizontally */
   display: block; /* Block level to center properly */
 }
