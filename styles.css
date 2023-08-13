@@ -185,9 +185,9 @@ footer div {
 }
 
 .game-container {
-    width: 70%; /* Adjust the width as needed */
-    text-align: center;
+    width: 70%;
     border: 1px solid #ccc;
+    margin-right: 20px;
 }
 
 .game-container img {
@@ -196,8 +196,9 @@ footer div {
 }
 
 .minimap-container {
-    width: 20%; /* Adjust the width as needed */
-    text-align: center;
+    width: 70%;
+    border: 1px solid #ccc;
+    margin-right: 20px;
 }
 
 .minimap-container img {
