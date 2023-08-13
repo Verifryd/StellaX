@@ -88,16 +88,16 @@ height: 50vh; /* Adjust this value to position the buttons vertically */
 .button-wrapper img {
   width: 100%; /* Set the image width to 100% of the container */
   height: auto;
-  margin: 
+  margin: 10 px;
 }
 
 #buttons-container a {
   width: 40%; /* Adjust this value to change the button size */
-  padding: 5px; /* Padding around the buttons */
+  padding: 10px; /* Padding around the buttons */
 }
 
 #buttons-container img {
-  width: 15%;
+  width: 20%;
   height: auto;
 }
 
