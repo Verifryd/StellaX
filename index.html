@@ -1,35 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="preload" href="Assets/IntroAnimationProto.mp4" as="video" type="video/mp4">
-  <link rel="prefetch" href="homepage.html">
-  <link rel="stylesheet" href="styles.css">
-  <!-- ... (other head elements) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StellaX</title>
+  <!-- Three.js library -->
+  <script src="lib/three.module.js"></script>
+  <!-- OrbitControls -->
+<script src="lib/OrbitControls.js"></script> <!-- Adjust the path if needed --></script>
+  <!-- Custom script -->
+  <script type="module" src="main.js"></script>
+</script>
+  <script src="https://connect.manifoldxyz.dev/latest/connect.umd.min.js"></script>
+  <link rel="stylesheet" href="https://connect.manifoldxyz.dev/latest/connect.css">
 </head>
-<body id="index-page">
-  <!-- Clickable looping video acting as the "Enter" button -->
-  <div class="centered-video">
-    <video id="stellaX-video" autoplay loop muted>
-      <source src="Assets/StellaX.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
+<body>
+    <script>
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-  <script>
-    var video = document.getElementById('stellaX-video');
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
 
-    video.addEventListener('click', function() {
-      // Remove the loop attribute
-      this.removeAttribute('loop');
+        // Load the texture
+        var textureLoader = new THREE.TextureLoader();
+        textureLoader.load('Assets/HomepagePlaceholder.png', function(texture) {
+            var geometry = new THREE.BoxGeometry();
+            var material = new THREE.MeshBasicMaterial({ map: texture });
+            var cube = new THREE.Mesh(geometry, material);
+            scene.add(cube);
 
-      // Play the video if it's not already playing (in case it was paused)
-      this.play();
+            camera.position.z = 5;
 
-      // Add an 'ended' event listener to navigate to the homepage when the video ends
-      this.addEventListener('ended', function() {
-        window.location.href = 'homepage.html';
-      });
-    });
-  </script>
+            function animate() {
+                requestAnimationFrame(animate);
+
+                cube.rotation.x += 0.01;
+                cube.rotation.y += 0.01;
+
+                renderer.render(scene, camera);
+            }
+
+            animate();
+
+            // Add interactivity
+            var raycaster = new THREE.Raycaster();
+            var mouse = new THREE.Vector2();
+
+            window.addEventListener('click', function(event) {
+                mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+                mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+                raycaster.setFromCamera(mouse, camera);
+
+                var intersects = raycaster.intersectObjects(scene.children);
+                if (intersects.length > 0) {
+                    // Cube was clicked
+                    alert('Cube clicked! Redirecting...');
+                    window.location.href = 'homepage.html'; // Redirect to homepage
+                }
+            });
+        });
+    </script>
 </body>
 </html>
+
