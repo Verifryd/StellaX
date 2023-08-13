@@ -57,12 +57,14 @@ header nav a {
 
 #animated-cutscene #intro-animation {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   width: 95%;
   height: 95%;
+  transform: translate(-50%, -50%);
   object-fit: cover; /* Maintain aspect ratio while filling the container */
 }
+
 
 body {
   background-color: #fff; /* Making the background white */
