@@ -98,7 +98,10 @@ body {
   width: 100%; /* Set the image width to 100% of the container */
   height: auto;
   margin: 
-}
+
+
+
+
 
 
 #buttons-container a {
@@ -171,46 +174,6 @@ footer div {
 
 #objectives img {
   max-width: 100%;
-}
-
-/* New styles for the game overview page */
-
-#game-overview {
-  background-color: #fff; /* White background */
-  color: #000; /* Black text color */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.game-container img {
-    width: 100%;
-    height: auto;
-}
-
-.items-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px auto;
-    flex-wrap: wrap;
-}
-
-.item {
-    width: 30%;
-    text-align: center;
-}
-
-.item img {
-    max-width: 100%;
-    height: auto;
-}
-
-.item p {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #333;
 }
 
 /* Two Pixels, One Grand Prize Section */
@@ -334,8 +297,6 @@ footer div {
   max-width: 100%;
   margin: 10px;
 }
-
-
 
 /* Reuse general styling from previous pages (e.g., header, footer) */
 
