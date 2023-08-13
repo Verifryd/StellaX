@@ -86,13 +86,13 @@ body {
 }
 
 .button-wrapper {
-  width: 20%; /* You can increase the width percentage to make the buttons bigger */
+  width: 45%; /* You can increase the width percentage to make the buttons bigger */
   padding: 5px;
   text-align: center;
 }
 
 .button-wrapper img {
-  width: 100%; /* Set the image width to 100% of the container */
+  width: 30%; /* Set the image width to 100% of the container */
   height: auto;
   margin: 
 }
