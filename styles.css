@@ -57,7 +57,7 @@ header nav a {
 
 #animated-cutscene #intro-animation {
   position: absolute;
-  top: calc(50% - 20px);
+  top: calc(50% - 50px);
   left: 50%;
   width: 95%;
   height: 95%;
