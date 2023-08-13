@@ -180,12 +180,12 @@ footer div {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    margin: 20px auto;
 }
 
 .game-container {
-    width: 60%; /* Adjust the width as needed */
-    margin: 20px;
+    width: 70%; /* Adjust the width as needed */
     text-align: center;
     border: 1px solid #ccc;
 }
@@ -196,7 +196,7 @@ footer div {
 }
 
 .live-minimap {
-    width: 30%; /* Adjust the width as needed */
+    width: 20%; /* Adjust the width as needed */
     text-align: center;
 }
 
