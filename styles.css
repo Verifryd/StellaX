@@ -184,7 +184,7 @@ footer div {
 }
 
 .game-container {
-    width: 65%; /* Adjust as needed to increase the size */
+    width: 60%; /* You can adjust this percentage to make the game container larger or smaller */
     text-align: center;
     border: 1px solid #ccc;
 }
@@ -213,7 +213,7 @@ footer div {
 }
 
 .item {
-    width: 20%; /* Reduced width to shrink the GIFs */
+    width: 30%;
     text-align: center;
 }
 
