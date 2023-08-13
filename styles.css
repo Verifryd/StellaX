@@ -82,6 +82,8 @@ body {
   justify-content: center; /* Center the buttons horizontally */
   align-items: center; /* Center the buttons vertically */
   flex-wrap: wrap;
+  width: 100%; /* Full width of the parent container */
+
 }
 
 .button-wrapper {
