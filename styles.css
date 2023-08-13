@@ -269,7 +269,7 @@ footer div {
 
 /* AtariX Section */
 #atari-section {
-  background-color: #222;
+  background-color: #fff;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -282,7 +282,7 @@ footer div {
 /* Verifryd Brand Section */
 #verifryd-section {
   padding: 20px;
-  background-color: #333;
+  background-color: #fff;
   background-image: url('assets/StickerFinal.png');
   background-size: contain;
   background-repeat: no-repeat;
