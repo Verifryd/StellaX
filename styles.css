@@ -176,8 +176,15 @@ footer div {
     margin: 20px auto;
 }
 
+.game-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
 .game-container {
-    width: 65%;
+    width: 65%; /* Adjust as needed to increase the size */
     text-align: center;
     border: 1px solid #ccc;
 }
@@ -190,6 +197,7 @@ footer div {
 .minimap-container {
     width: 30%;
     text-align: center;
+    margin-left: 20px; /* Space between the game container and minimap */
 }
 
 .minimap-container img {
