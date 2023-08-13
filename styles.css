@@ -177,7 +177,8 @@ footer div {
 }
 
 /* New styles for the game overview page */
-#game-container {
+
+#game-overview {
   background-color: #fff; /* White background */
   color: #000; /* Black text color */
   display: flex;
