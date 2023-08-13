@@ -91,10 +91,6 @@ body {
   text-align: center;
 }
 
-.button-wrapper a {
-  display: block;
-}
-
 .button-wrapper img {
   width: 100%; /* Set the image width to 100% of the container */
   height: auto;
