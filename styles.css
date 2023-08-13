@@ -196,7 +196,7 @@ footer div {
 }
 
 .live-minimap {
-    width: 35%;
+    width: 25%;
     border: 1px solid #ccc;
     height: 400px; /* Adjust this value to control the height of the minimap */
     display: flex;
@@ -205,7 +205,7 @@ footer div {
 }
 
 .live-minimap img {
-    max-width: 100%;
+    max-width: 60%;
     height: auto;
 }
 
