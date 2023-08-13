@@ -170,7 +170,7 @@ footer div {
   max-width: 100%;
 }
 
-.main-container {
+.minimap-container {
     display: flex;
     justify-content: space-between;
     margin: 20px auto;
@@ -195,13 +195,12 @@ footer div {
     height: auto;
 }
 
-.minimap-container {
-    width: 70%;
-    border: 1px solid #ccc;
-    margin-right: 20px;
+.live-minimap {
+    width: 20%; /* Adjust the width as needed */
+    text-align: center;
 }
 
-.minimap-container img {
+.live-minimap img {
     max-width: 20%;
     height: auto;
 }
@@ -234,6 +233,12 @@ footer div {
   padding: 20px;
   background-color: #222;
   color: #fff;
+}
+
+.live-minimap {
+    width: 25%;
+    border: 1px solid #ccc;
+    height: 400px; /* You can adjust the height as needed */
 }
 
 /* Reuse general styling from previous pages (e.g., header, footer) */
