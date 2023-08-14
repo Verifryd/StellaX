@@ -232,6 +232,7 @@ footer {
 .verifryd-logo {
   max-width: 10%;
   margin: 10px;
+  text-align: center;
   justify-content: center; /* Center the buttons horizontally */
 }
 
