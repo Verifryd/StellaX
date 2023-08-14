@@ -101,13 +101,6 @@ height: 50vh; /* Adjust this value to position the buttons vertically */
   height: auto;
 }
 
-/* Media query for larger screens */
-@media (min-width: 768px) {
-  .button-wrapper {
-    width: 40%; /* You can set a different percentage for larger screens */
-  }
-}
-
 .pixel-button {
   display: inline-block;
   margin: 5px;
@@ -145,10 +138,6 @@ footer {
   padding: 10px;
   display: flex;
   justify-content: space-between;
-}
-
-footer div {
-  /* Additional styling for links, copyright, and social media */
 }
 
 /* Objectives Section */
@@ -232,7 +221,7 @@ footer div {
     color: #333;
 }
 
-#logos-container {
+.logos-container {
   text-align: center;
 }
 
@@ -260,13 +249,6 @@ footer div {
 #community-contributions a {
   color: #fff;
   text-decoration: none;
-}
-
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
 }
 
 /* Daily Clues & Puzzles Section */
