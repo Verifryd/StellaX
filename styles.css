@@ -259,7 +259,6 @@ footer {
 
 #daily-clues #clue-placeholder1,
 #daily-clues #clue-placeholder2 {
-  /* Styling for the clue or puzzle placeholders */
   border: 2px dashed #fff;
   height: 200px;
   margin: 10px;
