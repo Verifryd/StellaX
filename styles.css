@@ -232,6 +232,24 @@ footer div {
     color: #333;
 }
 
+#atari-section {
+  max-width: 5%; /* Adjust the size of the gifs */
+  max-height: 5%;
+  background-color: #fff;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+#atari-section img {
+  max-width: 50px; /* Adjust this value to control the size of the images */
+  margin: 10px;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
 /* Community Contributions Section */
 #community-contributions {
   padding: 10px;
@@ -246,19 +264,6 @@ footer div {
 #community-contributions a {
   color: #fff;
   text-decoration: none;
-}
-
-#atari-section {
-  max-width: 10%; /* Adjust the size of the gifs */
-  max-height: 10%;
-  background-color: #fff;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-}
-
-.fade-out {
-  animation: fadeOut 0.5s forwards;
 }
 
 @keyframes fadeOut {
