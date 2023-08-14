@@ -223,17 +223,13 @@ footer {
 
 .logos-container {
   display: flex;
-  justify-content: center; /* Center the buttons horizontally */
-  align-items: center; /* Center the buttons vertically */
-  flex-wrap: wrap;
 }
 
 .atari-logo,
 .verifryd-logo {
-  max-width: 10%;
-  margin: 10px;
+  width: 45%; /* You can increase the width percentage to make the buttons bigger */
+  padding: 5px;
   text-align: center;
-  justify-content: center; /* Center the buttons horizontally */
 }
 
 .fade-out {
