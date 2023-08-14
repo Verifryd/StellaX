@@ -277,16 +277,6 @@ footer div {
   text-align: center;
 }
 
-/* Verifryd Brand Section */
-#verifryd-section {
-  max-width: 10%; /* Adjust the size of the gifs */
-  max-height: 10%;
-  padding: 10px;
-  background-color: #fff;
-  background-image: url('assets/StickerFinal.png');
-  background-size: absolute;
-}
-
 .fade-out {
   animation: fadeOut 0.5s forwards;
 }
