@@ -222,9 +222,10 @@ footer {
 }
 
 .logos-container {
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center; /* Center the buttons vertically */
+  flex-wrap: wrap;
 }
 
 .atari-logo,
