@@ -232,17 +232,13 @@ footer div {
     color: #333;
 }
 
-#atari-section {
-  max-width: 5%; /* Adjust the size of the gifs */
-  max-height: 5%;
-  background-color: #fff;
-  color: #fff;
-  padding: 10px;
+#logos-container {
   text-align: center;
 }
 
-#atari-section img {
-  max-width: 50px; /* Adjust this value to control the size of the images */
+.atari-logo,
+.verifryd-logo {
+  max-width: 10%;
   margin: 10px;
 }
 
