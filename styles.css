@@ -46,25 +46,31 @@ header nav a {
 
 /* Styling for the animated cutscene section */
 #animated-cutscene {
-  position: fixed; /* Fixed position to cover the entire viewport */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* Hide anything outside the viewport */
-  z-index: 9999; /* Ensure it's on top of other elements */
+  overflow: hidden;
+  z-index: 9999;
 }
 
 #animated-cutscene #intro-animation {
   position: absolute;
-  top: calc(50% - 50px);
-  left: 50%;
-  width: 95%;
-  height: 95%;
-  transform: translate(-50%, -50%);
-  object-fit: cover; /* Maintain aspect ratio while filling the container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
+#connect-button-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
 
 body {
   background-color: #fff; /* Making the background white */
