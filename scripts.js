@@ -1,4 +1,6 @@
 
+var video = document.getElementById('stellax-video');
+
 function handleVideoClick() {
   // Open Manifold connect widget
   window.manifold.open();
@@ -9,10 +11,14 @@ function handleVideoClick() {
     // Play the video
     video.play();
 
-    // Listen for the video ended event
-    video.addEventListener('ended', function() {
-      window.location.href = "homepage.html"; // Redirect to the homepage
-    });
+// Function to handle wallet connection success
+function handleWalletConnectionSuccess() {
+  // Pause the video loop
+  video.loop = false;
+
+  // Add an event listener to redirect to the homepage once the video ends
+  video.addEventListener('ended', function() {
+    window.location.href = 'homepage.html';
   });
 }
 
