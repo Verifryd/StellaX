@@ -26,19 +26,23 @@ function handlePixelSplit() {
 // Add event listeners to trigger the above functions when appropriate
 window.addEventListener('load', handleCutscene);
 
-  var video = document.getElementById('stellax-video');
-  var buttonsContainer = document.getElementById('buttons-container');
+var video = document.getElementById('stellax-video'); // Changed to the correct video ID
+var buttonsContainer = document.getElementById('buttons-container');
 
-  // When the video ends
-  video.addEventListener('ended', function() {
-    // Hide the video
-    video.style.display = 'none';
+// When the video ends
+video.addEventListener('ended', function () {
+  // Hide the video
+  video.style.display = 'none';
 
-    // Show the buttons
-    buttonsContainer.style.display = 'flex';
-  });
+  // Show the buttons
+  buttonsContainer.style.display = 'flex';
+});
 
-
+// Event listener for the button click
+document.getElementById('button1').addEventListener('click', function () {
+  // Redirect to the homepage
+  window.location.href = 'homepage.html'; // Change this to the correct URL of your homepage
+});
 
 
   /* Check if the cutscene has been viewed before (using local storage)
