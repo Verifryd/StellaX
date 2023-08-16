@@ -26,7 +26,7 @@ function handlePixelSplit() {
 // Add event listeners to trigger the above functions when appropriate
 window.addEventListener('load', handleCutscene);
 
-  var video = document.getElementById('intro-animation');
+  var video = document.getElementById('stellax-video');
   var buttonsContainer = document.getElementById('buttons-container');
 
   // When the video ends
