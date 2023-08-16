@@ -10,11 +10,12 @@
   <title>StellaX</title>
 </head>
 <body>
-  <div id="animated-cutscene">
-    <video id="stellaX-video" autoplay loop muted>
-      <source src="Assets/StellaX.mp4" type="video/mp4">
-      Your browser does not support the video tag.
+<div id="stellax-video-container">
+    <video id="stellax-video" autoplay muted loop>
+        <source src="Assets/StellaX.mp4" type="video/mp4">
     </video>
+    <a href="#" id="video-button"></a> <!-- Added a clickable area over the video -->
+</div>
     <div id="connect-button-container">
       <div
         data-widget="m-connect"

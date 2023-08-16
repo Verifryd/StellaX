@@ -26,8 +26,13 @@ function handlePixelSplit() {
 // Add event listeners to trigger the above functions when appropriate
 window.addEventListener('load', handleCutscene);
 
-var video = document.getElementById('stellax-video'); // Changed to the correct video ID
-var buttonsContainer = document.getElementById('buttons-container');
+document.getElementById('video-button').addEventListener('click', function () {
+    // Redirect to the homepage
+    window.location.href = 'homepage.html'; // Change this to the correct URL of your homepage
+
+    // Or handle the wallet connection logic here
+});
+
 
 // When the video ends
 video.addEventListener('ended', function () {
