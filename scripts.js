@@ -60,16 +60,19 @@ document.getElementById('button1').addEventListener('click', function () {
   if (localStorage.getItem('cutsceneViewed') !== 'true') {
     // Play the cutscene
     introAnimation.play();
+});
 
     // Mark the cutscene as viewed
     localStorage.setItem('cutsceneViewed', 'true');
   } else {
     // Optionally, hide or skip the cutscene if viewed before
     introAnimation.style.display = 'none'; */
+});
 
 // Function to handle the pixel split transition
 function handlePixelSplit() {
   var pixelVideo = document.getElementById('stellaX-pixel');
+});
 
   // Code to create the pixel splitting animation (e.g., using CSS animations or JavaScript)
 
@@ -81,5 +84,4 @@ window.addEventListener('load', handleCutscene);
 
 // Call the handleCutscene function when the page loads
 window.addEventListener('load', handleCutscene);
-
-}
+});
