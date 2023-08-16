@@ -1,14 +1,25 @@
-// Function to handle the animated cutscene (optional view or one-time display)
-// Function to handle the animated cutscene (optional view or one-time display)
-function handleCutscene() {
-  var video = document.getElementById('stellax-video');
+function handleVideoClick() {
+  // Open Manifold connect widget
+  window.manifold.open();
 
-  // When the video ends
-  video.addEventListener('ended', function () {
-    // Redirect to the homepage
-    window.location.href = 'homepage.html';
+  // Wait for successful connection
+  window.manifold.on('connected', function() {
+    var video = document.getElementById('stellax-video');
+
+    // Play the video
+    video.play();
+
+    // Listen for the video ended event
+    video.addEventListener('ended', function() {
+      window.location.href = "homepage.html"; // Redirect to the homepage
+    });
   });
 }
+
+// Initialize Manifold connect widget
+window.manifold.init({
+  // Configuration parameters
+});
 
 // Add event listeners to trigger the above functions when appropriate
 window.addEventListener('load', handleCutscene);
