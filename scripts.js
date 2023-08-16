@@ -1,26 +1,22 @@
 // Function to handle the animated cutscene (optional view or one-time display)
 // Function to handle the animated cutscene (optional view or one-time display)
 function handleCutscene() {
-  var introAnimation = document.getElementById('intro-animation');
+  var video = document.getElementById('stellax-video');
   var buttonsContainer = document.getElementById('buttons-container');
 
   // When the video ends
-  introAnimation.addEventListener('ended', function() {
+  video.addEventListener('ended', function () {
     // Hide the video
-    introAnimation.style.display = 'none';
+    video.style.display = 'none';
 
     // Show the buttons
     buttonsContainer.style.display = 'flex';
+
+    // Redirect to the homepage after a delay (you can adjust the delay as needed)
+    setTimeout(function () {
+      window.location.href = 'homepage.html';
+    }, 1000); // 1-second delay
   });
-}
-
-// Function to handle the pixel split transition
-function handlePixelSplit() {
-  var pixelVideo = document.getElementById('stellaX-pixel');
-
-  // Code to create the pixel splitting animation (e.g., using CSS animations or JavaScript)
-
-  // Code to handle the transition to different pages based on user interaction with the pixels
 }
 
 // Add event listeners to trigger the above functions when appropriate
