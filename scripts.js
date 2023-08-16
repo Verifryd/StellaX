@@ -2,31 +2,16 @@
 // Function to handle the animated cutscene (optional view or one-time display)
 function handleCutscene() {
   var video = document.getElementById('stellax-video');
-  var buttonsContainer = document.getElementById('buttons-container');
 
   // When the video ends
   video.addEventListener('ended', function () {
-    // Hide the video
-    video.style.display = 'none';
-
-    // Show the buttons
-    buttonsContainer.style.display = 'flex';
-
-    // Redirect to the homepage after a delay (you can adjust the delay as needed)
-    setTimeout(function () {
-      window.location.href = 'homepage.html';
-    }, 1000); // 1-second delay
+    // Redirect to the homepage
+    window.location.href = 'homepage.html';
   });
 }
 
 // Add event listeners to trigger the above functions when appropriate
 window.addEventListener('load', handleCutscene);
-
-document.getElementById('video-button').addEventListener('click', function () {
-    // Redirect to the homepage
-    window.location.href = 'homepage.html'; // Change this to the correct URL of your homepage
-
-    // Or handle the wallet connection logic here
 });
 
 
