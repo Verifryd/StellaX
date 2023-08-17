@@ -231,8 +231,7 @@ footer {
 }
 
 .live-game-container img {
-  width: 100%;
-  height: auto;
+  width: 60%; /* Adjust the IPFS image size */
 }
 
 .live-indicator {
@@ -260,8 +259,7 @@ footer {
 }
 
 .live-minimap img {
-  max-width: 100%;
-  height: auto;
+  width: 30%; /* Adjust the minimap size */
 }
 
 .items-container {
