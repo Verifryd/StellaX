@@ -213,9 +213,9 @@ footer {
 }
 
 .game-container {
-    width: 60%;
-    border: 1px solid #ccc;
-    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .game-overview {
@@ -225,14 +225,11 @@ footer {
 }
 
 .live-game-container {
-  width: 60%;
-  margin: 20px auto;
-  text-align: center;
+    position: relative;
 }
 
 .live-game-container img {
-  width: 100%;
-  height: auto;
+    max-width: 60%;
 }
 
 .live-indicator {
