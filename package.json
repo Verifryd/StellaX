@@ -6,3 +6,9 @@
     "webpack": "^5.88.2"
   }
 }
+
+"scripts": {
+  "start": "webpack serve",
+  "build": "webpack"
+}
+
