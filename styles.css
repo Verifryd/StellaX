@@ -51,7 +51,7 @@ header nav a {
 }
 
 .live-game-container img {
-  max-width: 55%;
+  max-width: 40%;
   height: auto;
 }
 
@@ -140,6 +140,11 @@ height: 50vh; /* Adjust this value to position the buttons vertically */
   height: auto;
 }
 
+#threejs-container {
+  width: 100%;
+  height: 100%;
+}
+
 #animated-cutscene {
   position: relative;
   width: 100%;
@@ -218,15 +223,12 @@ footer {
 }
 
 .live-minimap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    margin: 20px auto;
+  max-width: 40%;
+  margin-left: 10px;
 }
 
 .live-minimap img {
-  max-width: 30%;
+  max-width: 40%;
   height: auto;
 }
 
