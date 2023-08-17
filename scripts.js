@@ -59,7 +59,7 @@ document.getElementById('button1').addEventListener('click', function () {
     localStorage.setItem('cutsceneViewed', 'true');
   } else {
     // Optionally, hide or skip the cutscene if viewed before
-    introAnimation.style.display = 'none'; */
+    introAnimation.style.display = 'none';
 });
 
 // Function to handle the pixel split transition
