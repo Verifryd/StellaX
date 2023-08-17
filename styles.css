@@ -1,83 +1,11 @@
-#index-page {
-  background-color: #fff; /* White background */
-  color: #000; /* Black text color */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-/* Styling for the video */
-#stellax-video-container {
-    position: relative;
-}
-
-#video-button {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent; /* Adjust this as needed */
-    cursor: pointer; /* Makes it look clickable */
-}
-
-/* General styling for body and header */
 body {
+  font-family: Arial, sans-serif;
+  margin: 0;
   background-color: #fff;
-  color: #fff;
-  font-family: 'Arial', sans-serif;
+  color: #000;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #333;
-}
-
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-}
-
-.live-game-container {
-  position: relative;
-  width: 50%;
-  text-align: center;
-}
-
-.live-game-container img {
-  max-width: 100%;
-  height: auto;
-}
-
-.live-indicator {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: green;
-  font-size: 14px;
-}
-
-.live-circle {
-  width: 10px;
-  height: 10px;
-  background-color: green;
-  border-radius: 50%;
-  margin-right: 5px;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-
-/* Styling for the animated cutscene section */
+/* Homepage styles */
 #animated-cutscene {
   position: fixed;
   top: 0;
@@ -97,154 +25,31 @@ header nav a {
   object-fit: cover;
 }
 
-#connect-button-container {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-}
-
-body {
-  background-color: #fff; /* Making the background white */
-}
-
-#buttons-container {
-  display: flex;
-  justify-content: center; /* Center the buttons horizontally */
-  align-items: center; /* Center the buttons vertically */
-  flex-wrap: wrap;
-height: 50vh; /* Adjust this value to position the buttons vertically */
-  margin-top: 25vh; /* Adjust this value to control the vertical spacing from the top */
-}
-
-.button-wrapper {
-  width: 45%; /* You can increase the width percentage to make the buttons bigger */
-  padding: 5px;
-  text-align: center;
-}
-
-.button-wrapper img {
-  width: 100%; /* Set the image width to 100% of the container */
-  height: auto;
-  margin: 10 px;
-}
-
-#buttons-container a {
-  width: 50%; /* Adjust this value to change the button size */
-  padding: 15px; /* Padding around the buttons */
-}
-
-#buttons-container img {
-  width: 17%;
-  height: auto;
-}
-
-.pixel-button {
-  display: inline-block;
-  margin: 5px;
-}
-
-.pixel-button img {
-  width: 100px; /* Set the desired width */
-}
-
-#placeholder-image {
-  display: block; /* Initially visible */
-  width: 100%;
-  height: auto;
-}
-
-#animated-cutscene {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  overflow: hidden;
-}
-
-#intro-animation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Styling for the footer */
-footer {
-  background-color: #333;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-/* Objectives Section */
-#objectives {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-
-#objectives div {
-  text-align: center;
-  width: 30%;
-  margin: 10px;
-}
-
-#objectives img {
-  max-width: 100%;
-}
-
-.main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.game-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    margin: 20px auto;
-}
-
-.game-container {
-    width: 60%;
-    border: 1px solid #ccc;
-    margin-right: 10px;
-}
-
+/* Game overview styles */
 .game-overview {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .live-game-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  position: relative;
+  width: 45%;
 }
 
 .live-game-container img {
-  width: 60%; /* Adjust the IPFS image size */
+  max-width: 100%;
+  height: auto;
 }
 
 .live-indicator {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  color: #333;
-  margin-top: 5px;
+  font-size: 12px;
 }
 
 .live-circle {
-  display: inline-block;
   width: 10px;
   height: 10px;
   background-color: green;
@@ -254,25 +59,25 @@ footer {
 }
 
 .live-minimap {
-  max-width: 30%;
-  margin-left: 20px;
+  width: 45%;
 }
 
 .live-minimap img {
-  width: 20%; /* Adjust the minimap size */
+  max-width: 100%;
+  height: auto;
 }
 
 .items-container {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  width: 80%;
-  margin: 20px auto;
+  justify-content: center;
+  width: 100%;
 }
 
 .item {
   width: 30%;
   text-align: center;
+  padding: 10px;
 }
 
 .item img {
@@ -280,81 +85,19 @@ footer {
   height: auto;
 }
 
-.item p {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #333;
-}
-
+/* Community puzzles styles */
 .logos-container {
-  display: flex;
+  text-align: center;
 }
 
 .atari-logo,
 .verifryd-logo {
-    width: 150px;
-    height: auto;
-    justify-content: top;
-}
-
-.fade-out {
-  animation: fadeOut 0.5s forwards;
-}
-
-/* Community Contributions Section */
-#community-contributions {
-  padding: 10px;
-  background-color: #333;
-}
-
-#community-contributions #chat-box {
-  border: 2px solid #fff;
-  padding: 10px;
-}
-
-#community-contributions a {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Daily Clues & Puzzles Section */
-#daily-clues {
-  padding: 20px;
-  background-color: #444;
-}
-
-#daily-clues #clue-placeholder1,
-#daily-clues #clue-placeholder2 {
-  border: 2px dashed #fff;
-  height: 200px;
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-/* Game Background Section */
-#game-background {
-  background-color: #444;
-  color: #fff;
-  padding: 20px;
-  background-image: url('assets/StellaXBackground.png');
-  background-size: cover;
-}
-
-/* Warren Robinett Tribute Section */
-#robinett-tribute {
-  padding: 20px;
-  background-color: #555;
-  text-align: center;
-}
-
-#robinett-tribute img {
-  max-width: 100%;
+  max-width: 10%;
   margin: 10px;
 }
 
-/* Reuse general styling from previous pages (e.g., header, footer) */
-
-
+/* Animations */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
