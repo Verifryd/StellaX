@@ -46,12 +46,12 @@ header nav a {
 
 .live-game-container {
   position: relative;
-  width: 50%;
+  width: 55%;
   text-align: center;
 }
 
 .live-game-container img {
-  max-width: 40%;
+  max-width: 55%;
   height: auto;
 }
 
@@ -218,12 +218,12 @@ footer {
 }
 
 .live-minimap {
-  max-width: 30%;
-  margin-left: 20px;
+  max-width: 40%;
+  margin-left: 10px;
 }
 
 .live-minimap img {
-  max-width: 30%;
+  max-width: 40%;
   height: auto;
 }
 
