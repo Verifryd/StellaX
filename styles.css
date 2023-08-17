@@ -9,18 +9,18 @@
 }
 
 /* Styling for the video */
-#stellax-video-container {
-    position: relative;
+#index-page .centered-video video {
+  background-color: #fff; /* White background */
+  width: 70%; /* Reduce the width to 50% */
+  margin: auto; /* Center the video horizontally */
+  display: block; /* Block level to center properly */
 }
 
-#video-button {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent; /* Adjust this as needed */
-    cursor: pointer; /* Makes it look clickable */
+#index-page video {
+  background-color: #fff; /* White background */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio while filling the container */
 }
 
 /* General styling for body and header */
@@ -46,31 +46,25 @@ header nav a {
 
 /* Styling for the animated cutscene section */
 #animated-cutscene {
-  position: fixed;
+  position: fixed; /* Fixed position to cover the entire viewport */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  z-index: 9999;
+  overflow: hidden; /* Hide anything outside the viewport */
+  z-index: 9999; /* Ensure it's on top of other elements */
 }
 
 #animated-cutscene #intro-animation {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  top: calc(50% - 50px);
+  left: 50%;
+  width: 95%;
+  height: 95%;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* Maintain aspect ratio while filling the container */
 }
 
-#connect-button-container {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-}
 
 body {
   background-color: #fff; /* Making the background white */
@@ -105,6 +99,13 @@ height: 50vh; /* Adjust this value to position the buttons vertically */
 #buttons-container img {
   width: 17%;
   height: auto;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .button-wrapper {
+    width: 40%; /* You can set a different percentage for larger screens */
+  }
 }
 
 .pixel-button {
@@ -144,6 +145,10 @@ footer {
   padding: 10px;
   display: flex;
   justify-content: space-between;
+}
+
+footer div {
+  /* Additional styling for links, copyright, and social media */
 }
 
 /* Objectives Section */
@@ -191,16 +196,16 @@ footer {
 }
 
 .live-minimap {
-    width: 25%;
+    width: 35%;
     border: 1px solid #ccc;
-    height: 400px; 
+    height: 400px; /* Adjust this value to control the height of the minimap */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .live-minimap img {
-    max-width: 60%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -212,7 +217,7 @@ footer {
 }
 
 .item {
-    width: 15%;
+    width: 30%;
     text-align: center;
 }
 
@@ -227,24 +232,37 @@ footer {
     color: #333;
 }
 
-.logos-container {
-  display: flex;
+/* Two Pixels, One Grand Prize Section */
+#two-pixels {
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
 }
 
-.atari-logo,
-.verifryd-logo {
-    width: 150px;
-    height: auto;
-    justify-content: top;
+.live-minimap {
+    width: 25%;
+    border: 1px solid #ccc;
+    height: 400px; /* You can adjust the height as needed */
 }
 
-.fade-out {
-  animation: fadeOut 0.5s forwards;
+/* Reuse general styling from previous pages (e.g., header, footer) */
+
+/* 50 Years of Atari Section */
+#atari-section {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+#atari-section img {
+  max-width: 45%;
+  margin: 10px;
 }
 
 /* Community Contributions Section */
 #community-contributions {
-  padding: 10px;
+  padding: 20px;
   background-color: #333;
 }
 
@@ -266,12 +284,48 @@ footer {
 
 #daily-clues #clue-placeholder1,
 #daily-clues #clue-placeholder2 {
+  /* Styling for the clue or puzzle placeholders */
   border: 2px dashed #fff;
   height: 200px;
   margin: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Reuse general styling from previous pages (e.g., header, footer) */
+
+/* AtariX Section */
+#atarix-section {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  background-image: url('assets/AtariXLogo.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Verifryd Brand Section */
+#verifryd-section {
+  padding: 20px;
+  background-color: #333;
+  background-image: url('assets/StickerFinal.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 
@@ -297,5 +351,4 @@ footer {
 }
 
 /* Reuse general styling from previous pages (e.g., header, footer) */
-
 
