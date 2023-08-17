@@ -1,5 +1,5 @@
 import * as THREE from 'https://threejs.org/build/three.module.js';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { OrbitControls } from './lib/OrbitControls.js';
 
 
 // Function to handle the animated cutscene (optional view or one-time display)
