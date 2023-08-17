@@ -212,6 +212,17 @@ footer {
     margin: 20px auto;
 }
 
+
+.live-minimap {
+  max-width: 30%;
+  margin-left: 20px;
+}
+
+.live-minimap img {
+  max-width: 30%;
+  height: auto;
+}
+
 .items-container {
   display: flex;
   justify-content: space-between;
