@@ -2,34 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StellaX: Taking the Pixel to the Next Dimension</title>
-    <!-- Link to CSS file (to be created) -->
+    <title>StellaX - Homepage</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body>
-    <script type="module" src="/main.js"></script>
-    <!-- Animated Cutscene Section -->
-    <section id="animated-cutscene">
-    <!-- Video -->
-    <video id="intro-animation" src="Assets/IntroAnimationProto.mp4" controls autoplay muted></video>
-    <!-- Image Buttons (hidden initially) -->
-<div id="buttons-container" style="display: none;">
-  <div class="button-wrapper">
-    <a href="game-overview.html" id="game-link">
-      <img src="Assets/HomepagePlaceholder.png" alt="Game Overview">
-      <p>Game Overview</p>
-    </a>
-  </div>
-  <div class="button-wrapper">
-    <a href="community-puzzles.html" id="community-link">
-      <img src="Assets/HomepagePlaceholder.png" alt="Community and Puzzles">
-      <p>Community and Puzzles</p>
-    </a>
-  </div>
-</div>
-    <!-- Link to JavaScript file (to be created) -->
-    <script src="scripts.js"></script>
+    <div class="container">
+        <div id="scene-container"></div>
+        <div class="buttons-container">
+            <a href="index.html" class="button">Start</a>
+            <a href="community-puzzles.html" class="button">Community Puzzles</a>
+        </div>
+    </div>
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('scene-container').appendChild(renderer.domElement);
+
+        // Create two cubes
+        const geometry = new THREE.BoxGeometry();
+        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        const cube1 = new THREE.Mesh(geometry, material);
+        const cube2 = new THREE.Mesh(geometry, material);
+
+        // Position the cubes
+        cube1.position.set(-2, 0, 0);
+        cube2.position.set(2, 0, 0);
+
+        scene.add(cube1);
+        scene.add(cube2);
+
+        camera.position.z = 5;
+
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+        function animate() {
+            requestAnimationFrame(animate);
+            cube1.rotation.x += 0.01;
+            cube1.rotation.y += 0.01;
+            cube2.rotation.x += 0.01;
+            cube2.rotation.y += 0.01;
+            renderer.render(scene, camera);
+        }
+
+        animate();
+    </script>
 </body>
 </html>
-
