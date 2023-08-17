@@ -48,13 +48,6 @@ document.getElementById('button1').addEventListener('click', function () {
   window.location.href = 'homepage.html';
 });
 
-
-  /* Check if the cutscene has been viewed before (using local storage) */
-  if (localStorage.getItem('cutsceneViewed') !== 'true') {
-    // Play the cutscene
-    introAnimation.play();
-});
-
     // Mark the cutscene as viewed
     localStorage.setItem('cutsceneViewed', 'true');
   } else {
