@@ -1,43 +1,35 @@
-
 var video = document.getElementById('stellax-video');
 
+// Function to handle the video click
 function handleVideoClick() {
+  // Play the video
+  video.play();
+
   // Open Manifold connect widget
   window.manifold.open();
-
-  // Wait for successful connection
-  window.manifold.on('connected', function() {
-       var stellaxVideo = document.getElementById('stellax-video');
-    // Play the video
-    video.play();
-
-// Function to handle wallet connection success
-function handleWalletConnectionSuccess() {
-  // Pause the video loop
-  video.loop = false;
-
-  // Add an event listener to redirect to the homepage once the video ends
-  video.addEventListener('ended', function() {
-    window.location.href = 'homepage.html';
-  });
 }
 
-  // Initiate wallet connection here
-  window.manifold.init({
-    // Configuration parameters
-    // ...
-    // Once the wallet is connected, resume playing the video
-    onConnect: function() {
-      stellaxVideo.play();
-    }
-  });
-});
+// Function to handle the wallet connection
+function handleWalletConnection() {
+  // Pause the video
+  video.pause();
+  
+  // Resume playing the video
+  video.play();
+}
 
-// Add an event listener for when the video ends
-stellaxVideo.addEventListener('ended', function() {
+// Function to handle the video end
+function handleVideoEnd() {
   // Redirect to the homepage
-  window.location.href = "homepage.html";
-});
+  window.location.href = 'homepage.html';
+}
+
+// Add event listeners
+video.addEventListener('click', handleVideoClick);
+video.addEventListener('ended', handleVideoEnd);
+
+// Manifold event listener for wallet connection
+window.manifold.addEventListener('walletConnected', handleWalletConnection);
 
 
 // When the video ends
