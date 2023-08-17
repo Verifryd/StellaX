@@ -161,6 +161,11 @@ height: 50vh; /* Adjust this value to position the buttons vertically */
   height: 100%;
 }
 
+.hidden {
+    display: none;
+}
+
+
 /* Styling for the footer */
 footer {
   background-color: #333;
