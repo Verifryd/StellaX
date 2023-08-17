@@ -49,7 +49,7 @@ document.getElementById('button1').addEventListener('click', function () {
 });
 
 
-  /* Check if the cutscene has been viewed before (using local storage)
+  /* Check if the cutscene has been viewed before (using local storage) */
   if (localStorage.getItem('cutsceneViewed') !== 'true') {
     // Play the cutscene
     introAnimation.play();

@@ -1,32 +1,39 @@
-// Initialization code
-var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-var renderer = new THREE.WebGLRenderer();
+import * as THREE from 'three';
+
+// Create a scene
+const scene = new THREE.Scene();
+
+// Create a camera
+const camera = new THREE.PerspectiveCamera(
+  75,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000
+);
+camera.position.z = 5;
+
+// Create a renderer
+const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-// Cube code
-var geometry = new THREE.BoxGeometry();
-var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-var cube = new THREE.Mesh(geometry, material);
+// Create a geometry
+const geometry = new THREE.BoxGeometry();
+
+// Create a material
+const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+
+// Create a mesh
+const cube = new THREE.Mesh(geometry, material);
+
+// Add the mesh to the scene
 scene.add(cube);
 
-// OrbitControls code
-var controls = new THREE.OrbitControls(camera, renderer.domElement);
-
-camera.position.z = 5;
-
-var animate = function () {
+// Animation loop
+function animate() {
   requestAnimationFrame(animate);
-
-  // Cube rotation
   cube.rotation.x += 0.01;
   cube.rotation.y += 0.01;
-
-  // Update controls
-  controls.update();
-
   renderer.render(scene, camera);
-};
-
+}
 animate();
