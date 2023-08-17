@@ -51,7 +51,7 @@ header nav a {
 }
 
 .live-game-container img {
-  max-width: 100%;
+  max-width: 40%;
   height: auto;
 }
 
@@ -210,59 +210,6 @@ footer {
     align-items: center;
     flex-wrap: nowrap;
     margin: 20px auto;
-}
-
-.game-container {
-    width: 60%;
-    border: 1px solid #ccc;
-    margin-right: 10px;
-}
-
-.game-overview {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.live-game-container {
-  width: 60%;
-  margin: 20px auto;
-  text-align: center;
-}
-
-.live-game-container img {
-  width: 100%;
-  height: auto;
-}
-
-.live-indicator {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  color: #333;
-  margin-top: 5px;
-}
-
-.live-circle {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: green;
-  border-radius: 50%;
-  margin-right: 5px;
-  animation: blink 1s infinite;
-}
-
-.live-minimap {
-  max-width: 30%;
-  margin-left: 20px;
-}
-
-.live-minimap img {
-  max-width: 100%;
-  height: auto;
 }
 
 .items-container {
