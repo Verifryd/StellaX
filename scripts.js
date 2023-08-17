@@ -1,3 +1,6 @@
+import * as THREE from 'lib/three.module.js';
+import { OrbitControls } from 'lib/OrbitControls.js';
+
 // Function to handle the animated cutscene (optional view or one-time display)
 // Function to handle the animated cutscene (optional view or one-time display)
 function handleCutscene() {
@@ -41,7 +44,7 @@ window.addEventListener('load', handleCutscene);
 
 
 
-  /* Check if the cutscene has been viewed before (using local storage)
+Check if the cutscene has been viewed before (using local storage)
   if (localStorage.getItem('cutsceneViewed') !== 'true') {
     // Play the cutscene
     introAnimation.play();
@@ -50,7 +53,7 @@ window.addEventListener('load', handleCutscene);
     localStorage.setItem('cutsceneViewed', 'true');
   } else {
     // Optionally, hide or skip the cutscene if viewed before
-    introAnimation.style.display = 'none'; */
+    introAnimation.style.display = 'none';
 
 // Function to handle the pixel split transition
 function handlePixelSplit() {
