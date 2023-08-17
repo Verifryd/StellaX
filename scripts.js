@@ -72,3 +72,4 @@ window.addEventListener('load', handleCutscene);
 window.addEventListener('load', handleCutscene);
 
 }
+
