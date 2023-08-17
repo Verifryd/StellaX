@@ -198,7 +198,6 @@ footer {
 }
 
 
-
 .live-indicator {
   display: flex;
   align-items: center;
@@ -224,7 +223,7 @@ footer {
 }
 
 .live-minimap img {
-  max-width: 100%;
+  max-width: 30%;
   height: auto;
 }
 
