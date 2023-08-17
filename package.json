@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@three-ts/orbit-controls": "^1.4.7",
     "three": "^0.155.0",
     "three-orbitcontrols": "^2.110.3",
     "webpack": "^5.88.2"
