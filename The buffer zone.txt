@@ -1,0 +1,16 @@
+The buffer zone:
+an area on the left and right that rotates through three different potential next room beginnings but with a trippy AI effect
+
+Bunch of red lasers in front of Faberge
+Burn button of xmas egg
+Red button for dpte
+
+Animation where easter egg falls down hole, then camera pans over hole and zooms in which transitions to home page
+
+Client Secret: 6d24b4116e716c86703f45dc3cf7bf35346a71a64cc42841b879cb925a8c3d0f
+
+Implement IPFS into game container STELLAX
+Implement three.js buttons on homepage STELLAX
+Implement wallet connection token gating STELLAX
+Fix community page STELLAX
+
