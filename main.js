@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import { OrbitControls } form 'three/examples/jsm/controls/OrbitControls'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 export function startThreeJsAnimation() {
   const scene = new THREE.Scene();
