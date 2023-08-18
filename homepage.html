@@ -36,7 +36,12 @@
 
           const renderer = new THREE.WebGLRenderer();
           renderer.setSize(window.innerWidth, window.innerHeight);
+          renderer.setClearColor(0xffffff); // Set background color to white
           document.getElementById('threejs-container').appendChild(renderer.domElement);
+
+          const textureLoader = new THREE.TextureLoader();
+          const texture = textureLoader.load('Assets/HomepagePlaceholder.png'); // Load the cube texture
+          const material = new THREE.MeshBasicMaterial({ map: texture }); // Apply the texture to the material
 
           const geometry = new THREE.BoxGeometry();
           const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
