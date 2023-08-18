@@ -1,5 +1,5 @@
-import * as THREE from 'lib/three.module.js'
-import { OrbitControls } from 'lib/OrbitControls'
+import * as THREE from './lib/three.module.js'
+import { OrbitControls } from './lib/OrbitControls'
 
 export function startThreeJsAnimation() {
   const scene = new THREE.Scene();
