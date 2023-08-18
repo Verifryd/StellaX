@@ -17,8 +17,8 @@
     <script>
         var video = document.getElementById('intro-animation');
         video.addEventListener('ended', function() {
-            document.getElementById('three-container').style.display = 'block';
-            initThreeJs();
+            document.getElementById('threejs-container').style.display = 'block';
+            startThreeJsAnimation();
         });
     </script>
     <div id="scene-container" class="hidden">
