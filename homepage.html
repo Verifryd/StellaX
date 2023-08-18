@@ -20,56 +20,29 @@
         </div>
     </div>
     <div id="scene-container"></div>
-    <script>
-        const video = document.getElementById('intro-animation');
-        const sceneContainer = document.getElementById('scene-container');
+<script>
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  var renderer = new THREE.WebGLRenderer();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
 
-        video.addEventListener('ended', function () {
-            // Hide the video
-            video.style.display = 'none';
+  var geometry = new THREE.BoxGeometry();
+  var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+  var cube = new THREE.Mesh(geometry, material);
+  scene.add(cube);
 
-            // Show the Three.js scene
-            sceneContainer.classList.remove('hidden');
+  camera.position.z = 5;
 
-            // Initialize the Three.js scene
-            initThreeJs();
-        });
+  var controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-        function initThreeJs() {
-            const scene = new THREE.Scene();
-            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-            const renderer = new THREE.WebGLRenderer();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            sceneContainer.appendChild(renderer.domElement);
-
-            // Create two cubes
-            const geometry = new THREE.BoxGeometry();
-            const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-            const cube1 = new THREE.Mesh(geometry, material);
-            const cube2 = new THREE.Mesh(geometry, material);
-
-            // Position the cubes
-            cube1.position.set(-2, 0, 0);
-            cube2.position.set(2, 0, 0);
-
-            scene.add(cube1);
-            scene.add(cube2);
-
-            camera.position.z = 5;
-
-            const controls = new THREE.OrbitControls(camera, renderer.domElement);
-
-            function animate() {
-                requestAnimationFrame(animate);
-                cube1.rotation.x += 0.01;
-                cube1.rotation.y += 0.01;
-                cube2.rotation.x += 0.01;
-                cube2.rotation.y += 0.01;
-                renderer.render(scene, camera);
-            }
-
-            animate();
-        }
-    </script>
+  function animate() {
+    requestAnimationFrame(animate);
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+    renderer.render(scene, camera);
+  }
+  animate();
+</script>
 </body>
 </html>
