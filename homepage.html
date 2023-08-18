@@ -45,7 +45,7 @@ document.body.appendChild(renderer.domElement);
 
 // Load texture
 var textureLoader = new THREE.TextureLoader();
-textureLoader.load('HomepagePlaceholder.png', function(texture) {
+textureLoader.load('Assets/HomepagePlaceholder.png', function(texture) {
     // Create material with texture
     var material = new THREE.MeshBasicMaterial({ map: texture });
 
@@ -77,6 +77,7 @@ window.addEventListener('resize', function() {
     camera.updateProjectionMatrix();
     renderer.setSize(width, height);
 });
+
 </script>
 </body>
 </html>
