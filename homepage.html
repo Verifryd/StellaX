@@ -27,13 +27,6 @@
             <a href="community-puzzles.html" class="button">Community Puzzles</a>
         </div>
     <div id="threejs-container" style="display: none;">
-        <!-- Three.js will be rendered here -->
-    </div>
-    <script src="https://threejs.org/build/three.js"></script>
-    <script src="main.js"></script>
-    <script src="scripts.js"></script>
-    </div>
-    <div id="scene-container"></div>
 <script>
   var scene = new THREE.Scene();
   var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -56,5 +49,11 @@
   }
   animate();
 </script>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="main.js"></script>
+    <script src="scripts.js"></script>
+    </div>
+    <div id="scene-container"></div>
 </body>
 </html>
