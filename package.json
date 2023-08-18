@@ -1,15 +1,12 @@
 {
-  "name": "stellax",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo 'Add your build command here'"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "three": "^0.132.2"
+    "@three-ts/orbit-controls": "^1.4.7",
+    "three": "^0.155.0"
+  },
+
+
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   }
 }
