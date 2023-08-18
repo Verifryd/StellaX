@@ -1,6 +1,13 @@
 import * as THREE from 'https://threejs.org/build/three.module.js';
 import { OrbitControls } from './lib/OrbitControls.js';
 
+function initThreeJs() {
+    // Your three.js code here
+}
+
+export function startThreeJsAnimation() {
+    initThreeJs();
+}
 
 // Create a scene
 var scene = new THREE.Scene();

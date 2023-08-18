@@ -7,12 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StellaX - Homepage</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script type="module" src="main.js"></script>
 </head>
 <body>
     <video id="intro-animation" autoplay>
         <source src="Assets/IntroAnimationProto.mp4" type="video/mp4">
     </video>
+    <div id="three-container" style="display:none;"></div>
+    <script>
+        var video = document.getElementById('intro-animation');
+        video.addEventListener('ended', function() {
+            document.getElementById('three-container').style.display = 'block';
+            startThreeJsAnimation();
+        });
+    </script>
     <div id="scene-container" class="hidden">
         <div class="buttons-container">
             <a href="index.html" class="button">Start</a>
