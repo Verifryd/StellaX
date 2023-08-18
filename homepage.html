@@ -30,54 +30,47 @@
     </div>
     <div id="scene-container"></div>
 <script>
-// Create scene
-var scene = new THREE.Scene();
-scene.background = new THREE.Color(0xffffff); // Set background to white
+        function startThreeJsAnimation() {
+          const scene = new THREE.Scene();
+          const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-// Create camera
-var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 5; // Position camera
+          const renderer = new THREE.WebGLRenderer();
+          renderer.setSize(window.innerWidth, window.innerHeight);
+          document.getElementById('three-container').appendChild(renderer.domElement);
 
-// Create renderer
-var renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+          const geometry = new THREE.BoxGeometry();
+          const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 
-// Load texture
-var textureLoader = new THREE.TextureLoader();
-textureLoader.load('Assets/HomepagePlaceholder.png', function(texture) {
-    // Create material with texture
-    var material = new THREE.MeshBasicMaterial({ map: texture });
+          const cube1 = new THREE.Mesh(geometry, material);
+          const cube2 = new THREE.Mesh(geometry, material);
 
-    // Create cube geometry
-    var geometry = new THREE.BoxGeometry();
+          cube1.position.x = -2; // Position the cubes
+          cube2.position.x = 2;
 
-    // Create mesh with geometry and material
-    var cube = new THREE.Mesh(geometry, material);
+          scene.add(cube1);
+          scene.add(cube2);
 
-    // Add cube to scene
-    scene.add(cube);
+          camera.position.z = 5;
 
-    // Animate
-    function animate() {
-        requestAnimationFrame(animate);
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
-        renderer.render(scene, camera);
-    }
+          const animate = function () {
+            requestAnimationFrame(animate);
 
-    animate();
-});
+            cube1.rotation.x += 0.01;
+            cube1.rotation.y += 0.01;
 
-// Handle window resize
-window.addEventListener('resize', function() {
-    var width = window.innerWidth;
-    var height = window.innerHeight;
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-    renderer.setSize(width, height);
-});
+            cube2.rotation.x += 0.01;
+            cube2.rotation.y += 0.01;
 
+            renderer.render(scene, camera);
+          };
+
+          animate();
+        }
+
+        document.getElementById('intro-video').addEventListener('ended', function() {
+          document.getElementById('three-container').style.display = 'block';
+          startThreeJsAnimation();
+        });
 </script>
 </body>
 </html>
