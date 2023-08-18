@@ -1,5 +1,5 @@
-import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
-import { OrbitControls } from './lib/OrbitControls.js';
+import * as THREE from 'three'
+import { OrbitControls } form 'three/examples/jsm/controls/OrbitControls'
 
 export function startThreeJsAnimation() {
   const scene = new THREE.Scene();
