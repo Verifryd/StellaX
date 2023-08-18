@@ -1,10 +1,6 @@
 import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
 import { OrbitControls } from './lib/OrbitControls.js';
 
-function initThreeJs() {
-    // Your three.js code here
-}
-
 export function startThreeJsAnimation() {
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0xffffff); // White background
