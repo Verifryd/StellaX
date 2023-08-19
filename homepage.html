@@ -56,6 +56,32 @@
 
           camera.position.z = 5;
 
+var raycaster = new THREE.Raycaster();
+var mouse = new THREE.Vector2();
+
+// Function to handle click event
+function onMouseClick(event) {
+  event.preventDefault();
+
+  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+  raycaster.setFromCamera(mouse, camera);
+
+  var intersects = raycaster.intersectObjects(scene.children);
+
+  if (intersects.length > 0) {
+    if (intersects[0].object === cube1) {
+      window.location.href = "game-overview.html"; // Redirect to the desired page for cube1
+    } else if (intersects[0].object === cube2) {
+      window.location.href = "community.html"; // Redirect to the desired page for cube2
+    }
+  }
+}
+
+// Add the click event listener
+window.addEventListener('click', onMouseClick, false);
+
           const animate = function () {
             requestAnimationFrame(animate);
 
