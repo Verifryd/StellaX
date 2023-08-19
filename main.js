@@ -1,5 +1,5 @@
-import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
-import { OrbitControls } from './lib/OrbitControls.js';
+import * as THREE from './lib/three.module.js'
+import { OrbitControls } from './lib/OrbitControls'
 
 export function startThreeJsAnimation() {
   const scene = new THREE.Scene();
@@ -8,14 +8,21 @@ export function startThreeJsAnimation() {
   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
   camera.position.z = 5;
 
+  const raycaster = new THREE.Raycaster();
+  const mouse = new THREE.Vector2();
+
   const renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderer.domElement);
+
+  const raycaster = new THREE.Raycaster();
+  const mouse = new THREE.Vector2();
 
   // First cube
   const geometry1 = new THREE.BoxGeometry();
   const material1 = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
   const cube1 = new THREE.Mesh(geometry1, material1);
+  cube1.url = 'game-overview.html'; // URL for the first cube
   scene.add(cube1);
   cube1.position.x = -2; // Positioning the first cube to the left
 
@@ -23,6 +30,7 @@ export function startThreeJsAnimation() {
   const geometry2 = new THREE.BoxGeometry();
   const material2 = new THREE.MeshBasicMaterial({ color: 0xff0000 });
   const cube2 = new THREE.Mesh(geometry2, material2);
+  cube2.url = 'community.html'; // URL for the second cube
   scene.add(cube2);
   cube2.position.x = 2; // Positioning the second cube to the right
 

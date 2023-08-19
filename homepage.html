@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StellaX - Homepage</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="main.js" type="module"></script></script>
 </head>
 <body>
     <video id="intro-animation" autoplay>
@@ -30,6 +30,27 @@
     </div>
     <div id="scene-container"></div>
 <script>
+
+window.addEventListener('click', onDocumentMouseClick, false);
+
+function onDocumentMouseClick(event) {
+  event.preventDefault();
+
+  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+  raycaster.setFromCamera(mouse, camera);
+
+  // Assuming cubes are stored in an array called "cubes"
+  const intersects = raycaster.intersectObjects(cubes);
+
+  if (intersects.length > 0) {
+    const intersectedObject = intersects[0].object;
+    if (intersectedObject.url) {
+      window.location.href = intersectedObject.url;
+    }
+  }
+}
         function startThreeJsAnimation() {
           const scene = new THREE.Scene();
           const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -46,7 +67,10 @@
           const geometry = new THREE.BoxGeometry();
 
           const cube1 = new THREE.Mesh(geometry, material);
+          cube1.url = 'game-overview.html'; // URL for the first cube
           const cube2 = new THREE.Mesh(geometry, material);
+          cube2.url = 'community.html'; // URL for the second cube
+
 
           cube1.position.x = -2; // Position the cubes
           cube2.position.x = 2;
@@ -55,6 +79,9 @@
           scene.add(cube2);
 
           camera.position.z = 5;
+
+  // Orbit controls
+          const controls = new OrbitControls(camera, renderer.domElement);
 
           const animate = function () {
             requestAnimationFrame(animate);
@@ -72,7 +99,7 @@
         }
 
         document.getElementById('intro-animation').addEventListener('ended', function() {
-          document.getElementById('three-container').style.display = 'block';
+          document.getElementById('threejs-container').style.display = 'block';
           startThreeJsAnimation();
         });
 </script>
