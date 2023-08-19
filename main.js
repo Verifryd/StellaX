@@ -15,9 +15,6 @@ export function startThreeJsAnimation() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderer.domElement);
 
-  const raycaster = new THREE.Raycaster();
-  const mouse = new THREE.Vector2();
-
   // First cube
   const geometry1 = new THREE.BoxGeometry();
   const material1 = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
