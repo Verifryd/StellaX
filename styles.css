@@ -44,17 +44,6 @@ header nav a {
   padding: 10px;
 }
 
-.live-game-container {
-  position: relative;
-  width: 55%;
-  text-align: center;
-}
-
-.live-game-container img {
-  max-width: 40%;
-  height: auto;
-}
-
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
@@ -163,6 +152,21 @@ height: 50vh; /* Adjust this value to position the buttons vertically */
 
 .hidden {
     display: none;
+}
+
+.live-game-container.align-left .game-image {
+    /* Styles for centering the image to the center left */
+    margin-left: 0;
+    transform: scale(1.6);
+}
+
+.live-game-container.align-right .game-image {
+    /* Styles for centering the image to the center right */
+    position: relative;
+    width: 55%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
@@ -333,3 +337,22 @@ footer {
 /* Reuse general styling from previous pages (e.g., header, footer) */
 
 
+
+
+
+.live-game-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.live-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.live-minimap {
+    margin-left: 20px;
+}
