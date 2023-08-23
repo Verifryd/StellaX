@@ -30,20 +30,6 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #333;
-}
-
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-}
-
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
@@ -155,34 +141,6 @@ height: 50vh; /* Adjust this value to position the buttons vertically */
 }
 
 
-
-/* Styling for the footer */
-footer {
-  background-color: #333;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-/* Objectives Section */
-#objectives {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-
-#objectives div {
-  text-align: center;
-  width: 30%;
-  margin: 10px;
-}
-
-#objectives img {
-  max-width: 100%;
-}
-
 .main-content {
     display: flex;
     justify-content: center;
@@ -219,7 +177,9 @@ footer {
 
 .live-minimap {
   max-width: 40%;
-  margin-left: 10px;
+  flex-direction: row;
+  align-items: right;
+  justify-content: right;
 }
 
 .live-minimap img {
@@ -266,50 +226,7 @@ footer {
   animation: fadeOut 0.5s forwards;
 }
 
-/* Community Contributions Section */
-#community-contributions {
-  padding: 10px;
-  background-color: #333;
-}
 
-#community-contributions #chat-box {
-  border: 2px solid #fff;
-  padding: 10px;
-}
-
-#community-contributions a {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Daily Clues & Puzzles Section */
-#daily-clues {
-  padding: 20px;
-  background-color: #444;
-}
-
-#daily-clues #clue-placeholder1,
-#daily-clues #clue-placeholder2 {
-  border: 2px dashed #fff;
-  height: 200px;
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-/* Warren Robinett Tribute Section */
-#robinett-tribute {
-  padding: 20px;
-  background-color: #555;
-  text-align: center;
-}
-
-#robinett-tribute img {
-  max-width: 100%;
-  margin: 10px;
-}
 
 /* Reuse general styling from previous pages (e.g., header, footer) */
 
@@ -319,18 +236,4 @@ footer {
     flex-direction: column;
     align-items: left;
     justify-content: left;
-}
-
-.live-indicator {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.live-minimap {
-    flex-direction: row;
-    align-items: right;
-    justify-content: right;
-    margin-right: 20px;
 }
