@@ -177,9 +177,7 @@ height: 50vh; /* Adjust this value to position the buttons vertically */
 
 .live-minimap {
   max-width: 40%;
-  flex-direction: row;
-  align-items: right;
-  justify-content: right;
+  margin-left: 20px;
 }
 
 .live-minimap img {
@@ -230,10 +228,14 @@ height: 50vh; /* Adjust this value to position the buttons vertically */
 
 /* Reuse general styling from previous pages (e.g., header, footer) */
 
+.live-section {
+    display: flex;
+    align-items: center;
+}
 
 .live-game-container {
     display: flex;
     flex-direction: column;
-    align-items: left;
-    justify-content: left;
+    align-items: center;
+    justify-content: center;
 }
