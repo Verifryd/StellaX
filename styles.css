@@ -44,17 +44,6 @@ header nav a {
   padding: 10px;
 }
 
-.live-game-container {
-  position: relative;
-  width: 55%;
-  text-align: center;
-}
-
-.live-game-container img {
-  max-width: 40%;
-  height: auto;
-}
-
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
