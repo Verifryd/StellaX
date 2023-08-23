@@ -44,20 +44,6 @@ header nav a {
   padding: 10px;
 }
 
-.game-overview {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.live-section {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .live-game-container {
   position: relative;
   width: 55%;
@@ -65,10 +51,8 @@ header nav a {
 }
 
 .live-game-container img {
-    width: 300px; /* Adjust the width as needed */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  max-width: 40%;
+  height: auto;
 }
 
 
@@ -237,10 +221,12 @@ footer {
 
 
 .live-indicator {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
 }
 
 .live-circle {
@@ -254,18 +240,21 @@ footer {
 }
 
 .live-minimap {
-    position: absolute;
-    right: 0;
+  max-width: 40%;
+  margin-left: 10px;
 }
 
 .live-minimap img {
-    width: 150px; /* Adjust the width as needed */
+  max-width: 40%;
+  height: auto;
 }
 
 .items-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 20px auto;
 }
 
 .item {
