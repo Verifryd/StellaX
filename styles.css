@@ -154,13 +154,8 @@ height: 50vh; /* Adjust this value to position the buttons vertically */
     display: none;
 }
 
-.live-game-container.align-left .game-image {
-    /* Styles for centering the image to the center left */
-    margin-left: 0;
-    transform: scale(1.6);
-}
 
-.live-game-container.align-right .game-image {
+.live-game-container.align-left .game-image {
     /* Styles for centering the image to the center right */
     position: relative;
     width: 55%;
