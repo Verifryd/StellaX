@@ -154,20 +154,6 @@ height: 50vh; /* Adjust this value to position the buttons vertically */
     display: none;
 }
 
-.live-game-container.align-left .game-image {
-    /* Styles for centering the image to the center left */
-    margin-left: 0;
-    transform: scale(1.6);
-}
-
-.live-game-container.align-right .game-image {
-    /* Styles for centering the image to the center right */
-    position: relative;
-    width: 55%;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
-}
 
 
 /* Styling for the footer */
@@ -313,15 +299,6 @@ footer {
 }
 
 
-/* Game Background Section */
-#game-background {
-  background-color: #444;
-  color: #fff;
-  padding: 20px;
-  background-image: url('assets/StellaXBackground.png');
-  background-size: cover;
-}
-
 /* Warren Robinett Tribute Section */
 #robinett-tribute {
   padding: 20px;
@@ -335,13 +312,6 @@ footer {
 }
 
 /* Reuse general styling from previous pages (e.g., header, footer) */
-
-
-.game-and-indicator {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 
 .live-game-container {
@@ -359,5 +329,8 @@ footer {
 }
 
 .live-minimap {
-    margin-left: 20px;
+    flex-direction: row;
+    align-items: right;
+    justify-content: right;
+    margin-right: 20px;
 }
