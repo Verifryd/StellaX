@@ -44,6 +44,17 @@ header nav a {
   padding: 10px;
 }
 
+.live-game-container {
+  position: relative;
+  width: 55%;
+  text-align: center;
+}
+
+.live-game-container img {
+  max-width: 40%;
+  height: auto;
+}
+
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
@@ -152,16 +163,6 @@ height: 50vh; /* Adjust this value to position the buttons vertically */
 
 .hidden {
     display: none;
-}
-
-
-.live-game-container.align-left .game-image {
-    /* Styles for centering the image to the center right */
-    position: relative;
-    width: 55%;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 
