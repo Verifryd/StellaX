@@ -14,3 +14,50 @@ Implement three.js buttons on homepage STELLAX
 Implement wallet connection token gating STELLAX
 Fix community page STELLAX
 
+Verrukt style gameplay. The first locked room seperates the two pixels
+If the pixels merge, the game restarts
+The two teams have tokengated seperate chat and minimaps
+The pixels split into two distinctly different color schemes
+MERGE THE PIXELS TO WIN THE GAME
+DAO integration and distributed governance
+Both homepage buttons have their respective side of the game. One is the overview and the other is the community chat
+
+
+
+
+
+So I like this text I'm about to send you, but I want you to include the hidden digital easter egg hunt I am hiding in the game
+
+
+Title: "StellaX"
+
+Genre: Adventure / Puzzle
+
+Platform: Web (using Three.js for 3D minimap graphics, and IPFS for tokenized game progression)
+
+Target Audience: Players interested in decentralized technology, puzzles, and exploration. Also Atari fans.
+
+Game Concept
+
+Story:
+The two teams takes on the role of guiding their respective pixel through an adventure games. Each room is part of a broader puzzle that can only be solved by the community of players. The game world is constantly evolving, and players must work together, voting on key decisions that will shape the gameplay.
+
+Exploration: Players explore different planets, each with unique environments and challenges.
+Puzzles: Players solve puzzles to find artifacts. These puzzles may require collaboration with other players.
+Community Voting: Players can vote on certain aspects of the game, such as unlocking new areas or altering game rules. Voting is done through a token-based system.
+IPFS Integration: Game assets and data are hosted on IPFS, ensuring decentralized and transparent storage. The game state can be updated through IPFS, reflecting the outcomes of community votes.
+
+Key Components
+3D World Rendering: Utilize IPFS to create 3D environments for players to explore.
+Smart Contracts: Implement smart contracts to handle the token economy and voting mechanism.
+IPFS Integration: Allow for daily metadata refreshes.
+Team Chats: Allow players to communicate and collaborate within the game.
+Daily Refreshes: Update the game world daily based on voting results, creating a dynamic and ever-changing experience.
+
+Challenges
+Scalability: Managing a large number of players and votes might require careful planning.
+Security: Ensuring a secure and fair voting system.
+Content Creation: Continuously creating engaging content to keep players interested.
+
+Conclusion
+"StellaX" is a community-driven adventure game that combines exploration, puzzle-solving, and decentralized technologies. By involving players in the decision-making process and using IPFS for transparent data handling, the game offers a unique and engaging experience.
