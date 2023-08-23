@@ -337,7 +337,11 @@ footer {
 /* Reuse general styling from previous pages (e.g., header, footer) */
 
 
-
+.game-and-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 .live-game-container {
