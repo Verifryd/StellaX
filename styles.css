@@ -176,8 +176,8 @@ height: 50vh; /* Adjust this value to position the buttons vertically */
 }
 
 .live-minimap {
-  max-width: 40%;
-  margin-left: 20px;
+    flex-shrink: 0;  /* Prevents it from shrinking if there's not enough space */
+    margin-left: 20px;
 }
 
 .live-minimap img {
@@ -230,9 +230,10 @@ height: 50vh; /* Adjust this value to position the buttons vertically */
 
 .live-section {
     display: flex;
-    flex-direction: row;
+    align-items: flex-start;
 }
 
 .live-game-container {
-    max-width: 70%;  /* Adjust this value if needed */
+    flex: 1;  /* Allows it to grow and take up any available space but not all */
+    max-width: 60%; /* Restricts it from taking too much space */
 }
