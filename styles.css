@@ -8,8 +8,8 @@
 }
 
 /* Styling for the video */
-#stellax-video-container {
-    position: relative;
+#centered-video {
+    position: absolute;
     width: 30vw;   /* 50% of the viewport width */
     height: 30vw;  /* 16:9 aspect ratio, adjust if your video has a different aspect ratio */
 }
