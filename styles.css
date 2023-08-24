@@ -5,11 +5,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+    width: 30vw;   /* 50% of the viewport width */
+    height: 30vw;  /* 16:9 aspect ratio, adjust if your video has a different aspect ratio */
 }
 
 /* Styling for the video */
 #centered-video {
-    position: absolute;
+    align-items: center;
+    justify-content: center;
     width: 30vw;   /* 50% of the viewport width */
     height: 30vw;  /* 16:9 aspect ratio, adjust if your video has a different aspect ratio */
 }
