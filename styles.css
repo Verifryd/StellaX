@@ -186,7 +186,7 @@ body.threejs-shown {
 .live-minimap {
   max-width: 45%;
   margin-left: 20px;
-  transform: translate(0px, 100px);  /* Adjust these values as needed */
+  transform: translate(50px, 120px);  /* Adjust these values as needed */
 }
 
 .live-minimap img {
