@@ -1,50 +1,42 @@
+
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   StellaX - Homepage
-  </title>
-  <link href="styles.css" rel="stylesheet"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js">
-  </script>
- </head>
- <body>
-  <video autoplay="" id="intro-animation">
-   <source src="Assets/IntroAnimationProto.mp4" type="video/mp4"/>
-  </video>
-  <div id="threejs-container" style="display:none;">
-  </div>
-  <script>
-   var video = document.getElementById('intro-animation');
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StellaX - Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <video id="intro-animation" autoplay>
+        <source src="Assets/IntroAnimationProto.mp4" type="video/mp4">
+    </video>
+    <div id="threejs-container" style="display:none;"></div>
+    <script>
+        var video = document.getElementById('intro-animation');
         video.addEventListener('ended', function() {
         video.style.display = 'none'; // Hide the video
             document.getElementById('threejs-container').style.display = 'block';
             startThreeJsAnimation();
         });
-  </script>
-  <div class="hidden" id="scene-container">
-   <div class="buttons-container">
-    <a class="button" href="index.html">
-     Start
-    </a>
-    <a class="button" href="community-puzzles.html">
-     Community Puzzles
-    </a>
-   </div>
-  </div>
-  <div id="scene-container">
-  </div>
-  <script>
-   function startThreeJsAnimation() {
+    </script>
+    <div id="scene-container" class="hidden">
+        <div class="buttons-container">
+            <a href="index.html" class="button">Start</a>
+            <a href="community-puzzles.html" class="button">Community Puzzles</a>
+        </div>
+    </div>
+    <div id="scene-container"></div>
+<script>
+        function startThreeJsAnimation() {
           const scene = new THREE.Scene();
           const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-          const renderer = new THREE.WebGLRenderer();
+          const renderer = new THREE.WebGLRenderer({ alpha: true });
           renderer.setSize(window.innerWidth, window.innerHeight);
-          renderer.setClearColor(0xffffff); // Set background color to white
+          renderer.setClearColor(0x000000, 0); // Set background color to white
           document.getElementById('threejs-container').appendChild(renderer.domElement);
 
           const textureLoader = new THREE.TextureLoader();
@@ -106,10 +98,12 @@ window.addEventListener('click', onMouseClick, false);
         }
 
         document.getElementById('intro-animation').addEventListener('ended', function() {
-    document.body.classList.add('threejs-shown');
           document.getElementById('three-container').style.display = 'block';
           startThreeJsAnimation();
         });
-  </script>
- </body>
+</script>
+</body>
 </html>
+
+
+
