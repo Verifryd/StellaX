@@ -1,8 +1,6 @@
 #index-page {
   background-color: #fff; /* White background */
   color: #000; /* Black text color */
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
