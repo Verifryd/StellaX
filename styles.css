@@ -246,3 +246,6 @@ body.threejs-shown {
     max-width: 60%; /* Restricts it from taking too much space */
     transform: translate(370px, 185px);  /* Adjust these values as needed */
 }
+.community-puzzles .live-section {
+    flex-direction: row-reverse;
+}
