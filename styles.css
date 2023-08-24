@@ -176,8 +176,8 @@ height: 50vh; /* Adjust this value to position the buttons vertically */
 }
 
 .live-minimap {
-    flex-shrink: 0;  /* Prevents it from shrinking if there's not enough space */
-    margin-left: 20px;
+  max-width: 40%;
+  margin-left: 20px;
 }
 
 .live-minimap img {
