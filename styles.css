@@ -66,8 +66,12 @@ body {
 }
 
 body {
-  background: url('Assets/BufferZone.gif') no-repeat center center fixed;
-  background-size: cover;
+  background-color: #fff; /* Making the background white */
+}
+
+body.threejs-shown {
+    background: url('Assets/BufferZone.gif') no-repeat center center fixed;
+    background-size: cover;
 }
 
 #buttons-container {
