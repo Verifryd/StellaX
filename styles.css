@@ -120,6 +120,11 @@ height: 50vh; /* Adjust this value to position the buttons vertically */
   height: 100%;
 }
 
+body.threejs-shown {
+    background: url('Assets/BufferZone.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
 #animated-cutscene {
   position: relative;
   width: 100%;

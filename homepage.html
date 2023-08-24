@@ -30,7 +30,7 @@
     </div>
     <div id="scene-container"></div>
 <script>
-        function startThreeJsAnimation() {
+   function startThreeJsAnimation() {
           const scene = new THREE.Scene();
           const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
@@ -98,11 +98,12 @@ window.addEventListener('click', onMouseClick, false);
         }
 
         document.getElementById('intro-animation').addEventListener('ended', function() {
-          document.getElementById('three-container').style.display = 'block';
+    document.body.classList.add('threejs-shown');
+          document.getElementById('threejs-container').style.display = 'block';
           startThreeJsAnimation();
         });
-</script>
-</body>
+  </script>
+ </body>
 </html>
 
 
