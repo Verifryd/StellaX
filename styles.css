@@ -25,8 +25,7 @@
 
 /* General styling for body and header */
 body {
-  background-color: #fff;
-  color: #fff;
+  background: transparent; /* Adjust this as needed */
   font-family: 'Arial', sans-serif;
 }
 
