@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 70vh;
+  height: 100vh;
 }
 
 /* Styling for the video */
@@ -21,6 +21,11 @@
     height: 100%;
     background: transparent; /* Adjust this as needed */
     cursor: pointer; /* Makes it look clickable */
+}
+
+#centered-video {
+    width: 50%;
+    height: 50%;
 }
 
 /* General styling for body and header */
