@@ -244,5 +244,5 @@ body.threejs-shown {
 .live-game-container {
     flex: 1;  /* Allows it to grow and take up any available space but not all */
     max-width: 60%; /* Restricts it from taking too much space */
-    transform: translate(150px, 100px);  /* Adjust these values as needed */
+    transform: translate(400px, 220px);  /* Adjust these values as needed */
 }
