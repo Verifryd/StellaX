@@ -34,9 +34,9 @@
           const scene = new THREE.Scene();
           const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-          const renderer = new THREE.WebGLRenderer({ alpha: true });
+          const renderer = new THREE.WebGLRenderer();
           renderer.setSize(window.innerWidth, window.innerHeight);
-          renderer.setClearColor(0x000000, 0); // Set background color to white
+          renderer.setClearColor(0xffffff); // Set background color to white
           document.getElementById('threejs-container').appendChild(renderer.domElement);
 
           const textureLoader = new THREE.TextureLoader();
@@ -98,7 +98,7 @@ window.addEventListener('click', onMouseClick, false);
         }
 
         document.getElementById('intro-animation').addEventListener('ended', function() {
-          document.getElementById('threejs-container').style.display = 'block';
+          document.getElementById('three-container').style.display = 'block';
           startThreeJsAnimation();
         });
 </script>
