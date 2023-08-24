@@ -6,12 +6,12 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  max-width: 40%;
 }
 
 /* Styling for the video */
 #stellax-video {
     position: relative;
-    max-width: 40%;
 }
 
 #video-button {
