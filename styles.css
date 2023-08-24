@@ -17,8 +17,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 80%;
-    height: 80%;
+    width: 30%;
+    height: 30%;
     background: transparent; /* Adjust this as needed */
     cursor: pointer; /* Makes it look clickable */
 }
