@@ -230,7 +230,7 @@ height: 50vh; /* Adjust this value to position the buttons vertically */
 
 .live-section {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .live-game-container {
