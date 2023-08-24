@@ -12,8 +12,8 @@
 #stellaX-video{
     position: relative;
     background-color: #fff;
-    width: 50vw;   /* 50% of the viewport width */
-    height: 50vw;  /* 16:9 aspect ratio, adjust if your video has a different aspect ratio */
+    width: 45vw;   /* 50% of the viewport width */
+    height: 45vw;  /* 16:9 aspect ratio, adjust if your video has a different aspect ratio */
 }
 
 #video-button {
@@ -184,12 +184,12 @@ body.threejs-shown {
 }
 
 .live-minimap {
-  max-width: 40%;
+  max-width: 30%;
   margin-left: 20px;
 }
 
 .live-minimap img {
-  max-width: 40%;
+  max-width: 30%;
   height: auto;
 }
 
