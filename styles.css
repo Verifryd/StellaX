@@ -199,12 +199,13 @@ body.threejs-shown {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 80%;
-  max-height: 45%;
+  max-height: 20%;
   margin: 20px auto;
 }
 
 .item {
   width: 30%;
+  max-height: 20%;
   text-align: center;
 }
 
