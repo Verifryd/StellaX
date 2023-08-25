@@ -199,6 +199,7 @@ body.threejs-shown {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 80%;
+  max-height: 45%;
   margin: 20px auto;
 }
 
