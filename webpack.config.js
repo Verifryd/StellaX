@@ -1,10 +1,15 @@
 const path = require('path');
 
 module.exports = {
-  entry: 'main.js',  // Change this to the actual path where main.js resides
+  mode: 'development', // Set the mode to 'production' or 'development'
+  entry: 'main.js', // Make sure this path is correct
   output: {
-    filename: 'bundle.js',  // You can name this whatever you like
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
 };
-
