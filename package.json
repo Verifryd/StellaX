@@ -4,14 +4,13 @@
     "three": "^0.155.0"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   },
   "name": "stellax",
   "description": "# StellaX",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "./main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
