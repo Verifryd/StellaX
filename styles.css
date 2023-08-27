@@ -194,6 +194,14 @@ body.threejs-shown {
   height: auto;
 }
 
+.flipped.live-game-container {
+  order: 2;
+}
+
+.flipped.live-minimap {
+  order: 1;
+}
+
 .items-container {
   display: flex;
   justify-content: space-between;
