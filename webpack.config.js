@@ -1,9 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',  // Entry point
+  entry: 'main.js',  // Change this to the actual path where main.js resides
   output: {
-    filename: 'main.js',  // Output bundle
+    filename: 'bundle.js',  // You can name this whatever you like
     path: path.resolve(__dirname, 'dist'),
   },
 };
+
