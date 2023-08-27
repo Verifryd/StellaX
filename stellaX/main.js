@@ -1,24 +1,52 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="node_modules/three/examples/jsm/controls/OrbitControls.js"></script>
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
 
-setupCounter(document.querySelector('#counter'))
+export function startThreeJsAnimation() {
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0xffffff); // White background
+
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.z = 5;
+
+  const renderer = new THREE.WebGLRenderer();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+
+  // First cube
+  const geometry1 = new THREE.BoxGeometry();
+  const material1 = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+  const cube1 = new THREE.Mesh(geometry1, material1);
+  scene.add(cube1);
+  cube1.position.x = -2; // Positioning the first cube to the left
+
+  // Second cube
+  const geometry2 = new THREE.BoxGeometry();
+  const material2 = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+  const cube2 = new THREE.Mesh(geometry2, material2);
+  scene.add(cube2);
+  cube2.position.x = 2; // Positioning the second cube to the right
+
+  // Orbit controls
+  const controls = new OrbitControls(camera, renderer.domElement);
+
+  const animate = function () {
+    requestAnimationFrame(animate);
+
+    cube1.rotation.x += 0.01;
+    cube1.rotation.y += 0.01;
+
+    cube2.rotation.x += 0.01;
+    cube2.rotation.y += 0.01;
+
+    controls.update();
+
+    renderer.render(scene, camera);
+  };
+
+  animate();
+
+  // Event listeners for cubes
+  // TODO: Add click event listeners to navigate to respective pages
+}
+
