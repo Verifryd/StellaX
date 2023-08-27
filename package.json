@@ -11,7 +11,7 @@
   "description": "# StellaX",
   "version": "1.0.0",
   "main": "./main.js",
-  "scripts": {
+  "scripts": {"start": "node ./node_modules/react-scripts/bin/react-scripts.js start" }
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
