@@ -1,51 +1,88 @@
-import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+import * as THREE from 'three';
 import { OrbitControls } from './lib/OrbitControls.js';
 
-export function startThreeJsAnimation() {
-  const scene = new THREE.Scene();
-  scene.background = new THREE.Color(0xffffff); // White background
+            document.getElementById('threejs-container').style.display = 'block';
+            startThreeJsAnimation();
+        });
+    </script>
+    <div id="scene-container" class="hidden">
+        <div class="buttons-container">
+            <a href="index.html" class="button">Start</a>
+            <a href="community-puzzles.html" class="button">Community Puzzles</a>
+        </div>
+    </div>
+    <div id="scene-container"></div>
+<script>
+        function startThreeJsAnimation() {
+          const scene = new THREE.Scene();
+          const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  camera.position.z = 5;
+          const renderer = new THREE.WebGLRenderer({ alpha: true });
+          renderer.setSize(window.innerWidth, window.innerHeight);
+          renderer.setClearColor(0xffffff, 0);  // The second argument is the alpha (transparency) and is set to 0 for full transparency
+          document.getElementById('threejs-container').appendChild(renderer.domElement);
 
-  const renderer = new THREE.WebGLRenderer();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  document.body.appendChild(renderer.domElement);
+          const textureLoader = new THREE.TextureLoader();
+          const texture = textureLoader.load('Assets/HomepagePlaceholder.png'); // Load the cube texture
+          const material = new THREE.MeshBasicMaterial({ map: texture }); // Apply the texture to the material
 
-  // First cube
-  const geometry1 = new THREE.BoxGeometry();
-  const material1 = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-  const cube1 = new THREE.Mesh(geometry1, material1);
-  scene.add(cube1);
-  cube1.position.x = -2; // Positioning the first cube to the left
+          const geometry = new THREE.BoxGeometry();
 
-  // Second cube
-  const geometry2 = new THREE.BoxGeometry();
-  const material2 = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-  const cube2 = new THREE.Mesh(geometry2, material2);
-  scene.add(cube2);
-  cube2.position.x = 2; // Positioning the second cube to the right
+          const cube1 = new THREE.Mesh(geometry, material);
+          const cube2 = new THREE.Mesh(geometry, material);
 
-  // Orbit controls
-  const controls = new OrbitControls(camera, renderer.domElement);
+          cube1.position.x = -2; // Position the cubes
+          cube2.position.x = 2;
 
-  const animate = function () {
-    requestAnimationFrame(animate);
+          scene.add(cube1);
+          scene.add(cube2);
 
-    cube1.rotation.x += 0.01;
-    cube1.rotation.y += 0.01;
+          camera.position.z = 5;
 
-    cube2.rotation.x += 0.01;
-    cube2.rotation.y += 0.01;
+var raycaster = new THREE.Raycaster();
+var mouse = new THREE.Vector2();
 
-    controls.update();
+// Function to handle click event
+function onMouseClick(event) {
+  event.preventDefault();
 
-    renderer.render(scene, camera);
-  };
+  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 
-  animate();
+  raycaster.setFromCamera(mouse, camera);
 
-  // Event listeners for cubes
-  // TODO: Add click event listeners to navigate to respective pages
+  var intersects = raycaster.intersectObjects(scene.children);
+
+  if (intersects.length > 0) {
+    if (intersects[0].object === cube1) {
+      window.location.href = "game-overview.html"; // Redirect to the desired page for cube1
+    } else if (intersects[0].object === cube2) {
+      window.location.href = "community-puzzles.html"; // Redirect to the desired page for cube2
+    }
+  }
 }
 
+// Add the click event listener
+window.addEventListener('click', onMouseClick, false);
+
+          const animate = function () {
+            requestAnimationFrame(animate);
+
+            cube1.rotation.x += 0.01;
+            cube1.rotation.y += 0.01;
+
+            cube2.rotation.x += 0.01;
+            cube2.rotation.y += 0.01;
+
+            renderer.render(scene, camera);
+          };
+
+          animate();
+        }
+
+        document.getElementById('intro-animation').addEventListener('ended', function() {
+     document.body.classList.add('threejs-shown');
+          document.getElementById('threejs-container').style.display = 'block';
+          startThreeJsAnimation();
+        });
+</script>
