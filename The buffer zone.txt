@@ -5,6 +5,8 @@ Bunch of red lasers in front of Faberge
 Burn button of xmas egg
 Red button for dpte
 
+Hidden CAP Council login during into cutscene
+
 Animation where easter egg falls down hole, then camera pans over hole and zooms in which transitions to home page
 
 Client Secret: 6d24b4116e716c86703f45dc3cf7bf35346a71a64cc42841b879cb925a8c3d0f
